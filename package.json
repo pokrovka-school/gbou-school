@@ -2,7 +2,7 @@
 	"name": "gbou_school",
 	"version": "1.0.2",
 	"description": "Сайт ГБОУ ООШ с. Покровка",
-	"main": "Grunfile.js",
+	"main": "Gruntfile.js",
 	"scripts": {
 		"test": "npm i --legacy-peer-deps && bower install",
 		"build": "grunt -v",
