@@ -1,5 +1,8 @@
 bower_components
 node_modules
+test
+tests
+tmp
 # dotenv environment variable files
 .env
 .env.development.local
