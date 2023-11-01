@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 				src: 'src/glyph/*.svg',
 				dest: 'src/fonts/',
 				options: {
-					hashes: true,
+					hashes: false,
 					relativeFontPath: '@{fontpath}',
 					destLess: 'src/less',
 					font: 'pokrovka',

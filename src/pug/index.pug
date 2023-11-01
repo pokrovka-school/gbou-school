@@ -1,10 +1,8 @@
 doctype html
-html(lang="ru")
-	head
-		title
-			|[*ttl*]
-		style
-			include ../../site/assets/templates/projectsoft/css/main.min.css
+html(lang="ru" prefix="og: http://ogp.me/ns#")
+	|{{@FILE assets/templates/projectsoft/tpl/head.html}}
 	body
 		h1
 			|Hello!
+		|
+		|{{@FILE assets/templates/projectsoft/tpl/scripts.html}}
