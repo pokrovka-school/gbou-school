@@ -3,9 +3,14 @@ node_modules
 test
 tests
 tmp
+# sublime
+*.sublime-workspace
 # dotenv environment variable files
 .env
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
+# Evolution CMS
+site
+!site/assets/templates/projectsot/**/*.*
