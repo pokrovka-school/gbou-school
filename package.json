@@ -36,6 +36,7 @@
 		"grunt-datauri": "^0.4.0",
 		"grunt-group-css-media-queries": "^1.0.1",
 		"grunt-lineending": "^1.0.0",
+		"grunt-real-favicon": "^0.2.4",
 		"grunt-replace": "^2.0.1",
 		"grunt-sass": "^3.1.0",
 		"grunt-tinyimg": "^1.0.0",

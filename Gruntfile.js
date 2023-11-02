@@ -43,8 +43,78 @@ module.exports = function(grunt) {
 			},
 			all: [
 				'test/',
-				'tests/'
+				'tests/',
+				'site/html_code.html'
 			]
+		},
+		realFavicon: {
+			favicons: {
+				src: 'src/favicon/favicon.png',
+				dest: 'site/',
+				options: {
+					iconsPath: '[(site_url)]',
+					//html: [ 'favicons.txt' ],
+					design: {
+						ios: {
+							pictureAspect: 'backgroundAndMargin',
+							backgroundColor: '#ffffff',
+							margin: '14%',
+							assets: {
+								ios6AndPriorIcons: true,
+								ios7AndLaterIcons: true,
+								precomposedIcons: true,
+								declareOnlyDefaultIcon: false
+							}
+						},
+						desktopBrowser: {
+							design: 'raw'
+						},
+						windows: {
+							pictureAspect: 'noChange',
+							backgroundColor: '#ffffff',
+							onConflict: 'override',
+							assets: {
+								windows80Ie10Tile: true,
+								windows10Ie11EdgeTiles: {
+									small: true,
+									medium: true,
+									big: true,
+									rectangle: true
+								}
+							}
+						},
+						androidChrome: {
+							pictureAspect: 'backgroundAndMargin',
+							margin: '17%',
+							backgroundColor: '#ffffff',
+							themeColor: '#ffffff',
+							manifest: {
+								display: 'standalone',
+								orientation: 'notSet',
+								onConflict: 'override',
+								declared: true
+							},
+							assets: {
+								legacyIcon: true,
+								lowResolutionIcons: true
+							}
+						},
+						safariPinnedTab: {
+							pictureAspect: 'blackAndWhite',
+							threshold: 52.1875,
+							themeColor: '#5bbad5'
+						}
+					},
+					settings: {
+						scalingAlgorithm: 'Mitchell',
+						errorOnImageTooSmall: false,
+						readmeFile: false,
+						// htmlCodeFile: true,
+						htmlCodeFile: false,
+						usePathAsIs: false
+					}
+				}
+			}
 		},
 		concat: {
 			options: {
@@ -436,6 +506,7 @@ module.exports = function(grunt) {
 			//}
 		}
 	});
+	// grunt.registerTask('favicon',	["clean:all", "realFavicon"]);
 	grunt.registerTask('default',	["clean:all", "concat", "uglify", "webfont", "ttf2woff", "ttf2woff2", "imagemin", "tinyimg", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy", "pug"]);
 	grunt.registerTask('dev',		["watch"]);
 	grunt.registerTask('css',		["clean:all", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "pug"]);

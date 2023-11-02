@@ -12,7 +12,12 @@ tmp
 .env.production.local
 .env.local
 # Evolution CMS
-site
-!site/.htaccess
-!site/composer.json
+site/*.php
+site/*.md
+site/*.html
+site/*.access
+site/sample*.txt
+site/vendor
+site/manager
+site/assets
 !site/assets/templates/projectsot/**/*.*
