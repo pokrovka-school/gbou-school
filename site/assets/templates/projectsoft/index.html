@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: http://ogp.me/ns#">{{@FILE assets/templates/projectsoft/tpl/head.html}}
 	<body>
+		<div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div>
 		<div class="body bvi-no-styles">
-			<div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div>
-			<header id="masthead" role="banner">{{@FILE assets/templates/projectsoft/tpl/header.html}}</header>
+			<header class="container" id="masthead" role="banner">
+				{{@FILE assets/templates/projectsoft/tpl/header.html}}
+				<@IF:[*id:is(1)*]>
+				{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+				<@ENDIF>
+			</header>
 			<div class="main">
-				<div class="primary">
-					<div id="content" role="main">
-						<article class="page page-[*id*] type-page clearfix" id="page-[*id*]">
+				<div class="primary container">
+					<div class="row" id="content" role="main">
+						<article class="container page page-[*id*] type-page clearfix" id="page-[*id*]">
 							<header class="entry-header">
 								<h1 class="entry-title">[*longtitle:ifempty=`[*pagetitle*]`*]</h1>
 							</header>
@@ -18,8 +23,9 @@
 						</article>
 					</div>
 				</div>
-				<div class="secondary" id="secondary" role="complementary"></div>
+				<div class="secondary container" id="secondary" role="complementary"></div>
 			</div>
 		</div>
+		<footer class="footer">footer</footer>
 	</body>
 </html>

@@ -3,11 +3,13 @@
   --link-color: #ff0000;
   --link-hover-color: #ff0000;
   --color: #333;
+  --padding-column: 15px;
+  --margin-column: -15px;
 }
 
 @font-face {
   font-family: "Pokrovka";
-  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?v1.0.0") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?v1.0.0") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?v1.0.0") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?6a391db04a73763f18d078fe94643910") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?6a391db04a73763f18d078fe94643910") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?6a391db04a73763f18d078fe94643910") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -5865,9 +5867,61 @@ body .bvi-body .bvi-show {
   height: 32px !important;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.body {
+  min-height: 100vh;
+}
+
+.body {
+  max-width: 1425px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--color);
+}
+
+.container,
+.container-full {
+  padding-left: var(--padding-column);
+  padding-right: var(--padding-column);
+}
+
+.container:before,
+.container-full:before,
+.container:after,
+.container-full:after {
+  display: table;
+  content: " ";
+}
+
+.container:after,
+.container-full:after {
+  clear: both;
+}
+
+.row {
+  margin-left: var(--margin-column);
+  margin-right: var(--margin-column);
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
 }
 
 @media (min-width: 768px) {

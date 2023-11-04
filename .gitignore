@@ -17,6 +17,7 @@ site/*.md
 site/*.html
 site/*.access
 site/sample*.txt
+site/assets/templates/index.html
 site/vendor
 site/manager
 site/assets/*.*
@@ -38,11 +39,11 @@ site/assets/vendor
 site/assets/modules/*
 site/assets/plugins/*
 site/assets/snippets/*
-site/assets/templates/*
 site/assets/tvs/*
 
 # Templates
-!site/assets/templates/projectsot/**/*.*
+!site/assets/templates/projectsot
+!site/assets/templates/projectsot/*
 
 # Plugin TinyMCE4
 !site/assets/plugins/tinymce4
@@ -55,6 +56,9 @@ site/assets/plugins/tinymce4/tinymce/*
 !site/assets/plugins/tinymce4/tinymce/plugins
 site/assets/plugins/tinymce4/tinymce/plugins/*
 !site/assets/plugins/tinymce4/tinymce/plugins/emotic
+!site/assets/plugins/tinymce4/tinymce/skins
+site/assets/plugins/tinymce4/tinymce/skins/*
+!site/assets/plugins/tinymce4/tinymce/skins/school
 
 # Module clientSettings
 !site/assets/modules/clientsettings

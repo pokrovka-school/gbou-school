@@ -2,18 +2,23 @@ doctype html
 html(lang="ru" prefix="og: http://ogp.me/ns#")
 	|{{@FILE assets/templates/projectsoft/tpl/head.html}}
 	body
+		include inc/eya.pug
 		.body.bvi-no-styles
-			include inc/eya.pug
-			header#masthead(role="banner")
+			header.container#masthead(role="banner")
 				|{{@FILE assets/templates/projectsoft/tpl/header.html}}
+				|<@IF:[*id:is(1)*]>
+				|{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+				|<@ENDIF>
 			.main
-				.primary
-					#content(role="main")
-						article(id!="page-[*id*]" class!="page page-[*id*] type-page clearfix")
+				.primary.container
+					#content.row(role="main")
+						article.container(id!="page-[*id*]" class!="page page-[*id*] type-page clearfix")
 							header.entry-header
 								h1.entry-title
 									|[*longtitle:ifempty=`[*pagetitle*]`*]
 							.entry-content
 								|[*content*]
 								|[[PageBuilder]]
-				.secondary#secondary(role="complementary")
+				.secondary.container#secondary(role="complementary")
+		footer.footer
+			|footer

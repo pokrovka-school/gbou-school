@@ -243,7 +243,10 @@ module.exports = function(grunt) {
 				files : {
 					'test/css/main.css' : [
 						'src/less/main.less'
-					]
+					],
+					'test/css/tinymce.css' : [
+						'src/less/tinymce.less'
+					],
 				}
 			}
 		},
@@ -258,6 +261,9 @@ module.exports = function(grunt) {
 				files: {
 					'test/css/prefix.main.css' : [
 						'test/css/main.css'
+					],
+					'test/css/prefix.tinymce.css' : [
+						'test/css/tinymce.css'
 					]
 				}
 			}
@@ -265,7 +271,8 @@ module.exports = function(grunt) {
 		group_css_media_queries: {
 			group: {
 				files: {
-					'test/css/media/main.css': ['test/css/prefix.main.css']
+					'test/css/media/main.css': ['test/css/prefix.main.css'],
+					'test/css/media/tinymce.css': ['test/css/prefix.tinymce.css']
 				}
 			}
 		},
@@ -301,6 +308,24 @@ module.exports = function(grunt) {
 						],
 						dest: 'site/assets/templates/projectsoft/css/',
 						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten : true,
+						src: [
+							'test/css/media/tinymce.css'
+						],
+						dest: 'test/css/replace/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten : true,
+						src: [
+							'test/css/media/tinymce.css'
+						],
+						dest: 'site/assets/templates/projectsoft/css/',
+						filter: 'isFile'
 					}
 				]
 			},
@@ -312,7 +337,8 @@ module.exports = function(grunt) {
 			},
 			minify: {
 				files: {
-					'site/assets/templates/projectsoft/css/main.min.css' : ['test/css/replace/main.css']
+					'site/assets/templates/projectsoft/css/main.min.css' : ['test/css/replace/main.css'],
+					'site/assets/templates/projectsoft/css/tinymce.min.css' : ['test/css/replace/tinymce.css']
 				}
 			}
 		},
