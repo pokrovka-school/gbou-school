@@ -19,5 +19,53 @@ site/*.access
 site/sample*.txt
 site/vendor
 site/manager
-site/assets
+site/assets/*.*
+site/assets/.*
+site/assets/.thumbs
+site/assets/backup
+site/assets/cache
+site/assets/docs
+site/assets/export
+site/assets/files
+site/assets/images
+site/assets/import
+site/assets/js
+site/assets/lib
+site/assets/site
+site/assets/thumbs
+site/assets/vendor
+
+site/assets/modules/*
+site/assets/plugins/*
+site/assets/snippets/*
+site/assets/templates/*
+site/assets/tvs/*
+
+# Templates
 !site/assets/templates/projectsot/**/*.*
+
+# Plugin TinyMCE4
+!site/assets/plugins/tinymce4
+site/assets/plugins/tinymce4/*
+!site/assets/plugins/tinymce4/theme
+site/assets/plugins/tinymce4/theme/*
+!site/assets/plugins/tinymce4/theme/theme.tinymce4.site.inc.php
+!site/assets/plugins/tinymce4/tinymce
+site/assets/plugins/tinymce4/tinymce/*
+!site/assets/plugins/tinymce4/tinymce/plugins
+site/assets/plugins/tinymce4/tinymce/plugins/*
+!site/assets/plugins/tinymce4/tinymce/plugins/emotic
+
+# Module clientSettings
+!site/assets/modules/clientsettings
+site/assets/modules/clientsettings/*
+!site/assets/modules/clientsettings/config
+site/assets/modules/clientsettings/config/*
+!site/assets/modules/clientsettings/config/*.php
+
+# TV multiTV configs
+!site/assets/tvs/multitv
+site/assets/tvs/multitv/*
+!site/assets/tvs/multitv/configs
+site/assets/tvs/multitv/configs/*
+!site/assets/tvs/multitv/configs/photogallery.config.inc.php

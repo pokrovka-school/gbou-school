@@ -10,9 +10,9 @@ Options -Indexes
 
 DirectoryIndex index.php
 
-# ErrorDocument 403 /403/
-# ErrorDocument 404 /404/
-# ErrorDocument 504 /504/
+ErrorDocument 403 /403/
+ErrorDocument 404 /404/
+ErrorDocument 504 /504/
 
 RewriteEngine On
 

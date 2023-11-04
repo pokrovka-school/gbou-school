@@ -1,0 +1,50 @@
+doctype html
+html(lang="ru" prefix="og: http://ogp.me/ns#")
+	|{{@FILE assets/templates/projectsoft/tpl/head.html}}
+	body
+		.body.bvi-no-styles
+			include inc/eya.pug
+			header#masthead(role="banner")
+				|{{@FILE assets/templates/projectsoft/tpl/header.html}}
+			.main
+				.primary
+					#content(role="main")
+						article(id!="page-[*id*]" class!="page page-[*id*] type-page clearfix")
+							|<@IF:[*id:neq(1)*]>
+							header.entry-header
+								h1.entry-title
+									|[*longtitle:ifempty=`[*pagetitle*]`*]
+							|<@ENDIF>
+							.entry-content
+								|<@IF:[*id:is(1)*]>
+								|{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+								|<@ENDIF>
+								|[*content*]
+								p.clearfix
+						article(class!="page page-home-news type-page")
+							header.entry-header
+								h2.text-center.entry-title.page-h2-title
+									|Новости школы
+							|[[DocLister?
+							|   &parents=`2`
+							|   &display=`[(news_count_home)]`
+							|   &tvList=`imageSoc, news_date`
+							|   &tvPrefix=``
+							|   &orderBy=`news_date DESC`
+							|   &sortBy=`news_date`
+							|   &sortDir=`DESC`
+							|   &tvSortType=`TVDATETIME`
+							|   &prepare=`\ProjectSoft\PrepareDL::prepareItem`
+							|   &noneTPL=``
+							|   &ownerTPL=`@FILE:projectsoft/tpl/news_owner`
+							|   &tpl=`@FILE:projectsoft/tpl/news_tpl`
+							|   &showParent=`0`
+							|   &urlScheme=`full`
+							|   &noneWrapOuter=`0`
+							|]]
+				.secondary#secondary(role="complementary")
+					//|{{@FILE assets/templates/projectsoft/tpl/widgets.html}}
+				.main-footer
+					//|{{@FILE assets/templates/projectsoft/tpl/sites_link.html}} 
+			|{{@FILE assets/templates/projectsoft/tpl/footer.html}}
+		|{{@FILE assets/templates/projectsoft/tpl/scripts.html}}

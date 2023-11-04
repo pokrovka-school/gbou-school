@@ -2,7 +2,18 @@ doctype html
 html(lang="ru" prefix="og: http://ogp.me/ns#")
 	|{{@FILE assets/templates/projectsoft/tpl/head.html}}
 	body
-		h1
-			|Hello!
-		|
-		|{{@FILE assets/templates/projectsoft/tpl/scripts.html}}
+		.body.bvi-no-styles
+			include inc/eya.pug
+			header#masthead(role="banner")
+				|{{@FILE assets/templates/projectsoft/tpl/header.html}}
+			.main
+				.primary
+					#content(role="main")
+						article(id!="page-[*id*]" class!="page page-[*id*] type-page clearfix")
+							header.entry-header
+								h1.entry-title
+									|[*longtitle:ifempty=`[*pagetitle*]`*]
+							.entry-content
+								|[*content*]
+								|[[PageBuilder]]
+				.secondary#secondary(role="complementary")
