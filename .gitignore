@@ -16,6 +16,13 @@ site/*.php
 site/*.md
 site/*.html
 site/*.access
+
+site/*.png
+site/*.svg
+site/*.ico
+site/*.xml
+site/*.webmanifest
+
 site/sample*.txt
 site/assets/templates/index.html
 site/vendor

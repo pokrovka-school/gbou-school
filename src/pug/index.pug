@@ -4,12 +4,24 @@ html(lang="ru" prefix="og: http://ogp.me/ns#")
 	body
 		include inc/eya.pug
 		.body.bvi-no-styles
-			header.container#masthead(role="banner")
+			header.container.main-header(role="banner")
+				// Название
+				div.header-group
+					p.site-title
+						|ГБОУ ООШ с. Покровка м. р. Кинельский Самарской области
+					p.site-description
+						|Мы рады видеть Вас на официальном сайте государственного бюджетного общеобразовательного учреждения основной общеобразовательной школы с. Покровка муниципального района Кинельский Самарской области
+					// Поиск
+					div#search
+						form#search-form(action="/search/" method="GET")
+							input.bvi-no-styles(type="text" name="text" value="" placeholder="Поиск" required="")
+				// Карусель
+				// Меню 2
 				|{{@FILE assets/templates/projectsoft/tpl/header.html}}
 				|<@IF:[*id:is(1)*]>
 				|{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
 				|<@ENDIF>
-			.main
+			main.main
 				.primary.container
 					#content.row(role="main")
 						article.container(id!="page-[*id*]" class!="page page-[*id*] type-page clearfix")
@@ -19,6 +31,6 @@ html(lang="ru" prefix="og: http://ogp.me/ns#")
 							.entry-content
 								|[*content*]
 								|[[PageBuilder]]
-				.secondary.container#secondary(role="complementary")
+				.secondary.container(role="complementary")
 		footer.footer
 			|footer

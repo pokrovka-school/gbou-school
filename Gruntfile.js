@@ -45,6 +45,13 @@ module.exports = function(grunt) {
 				'test/',
 				'tests/',
 				'site/html_code.html'
+			],
+			favicon: [
+				'site/*.ico',
+				'site/*.png',
+				'site/*svg',
+				'site/*.xml',
+				'site/*.webmanifest'
 			]
 		},
 		realFavicon: {
@@ -52,7 +59,7 @@ module.exports = function(grunt) {
 				src: 'src/favicon/favicon.png',
 				dest: 'site/',
 				options: {
-					iconsPath: '[(site_url)]',
+					iconsPath: 'http://pokrovka.school',
 					//html: [ 'favicons.txt' ],
 					design: {
 						ios: {
@@ -124,7 +131,8 @@ module.exports = function(grunt) {
 				src: [
 					'bower_components/jquery/dist/jquery.js',
 					"bower_components/fancybox/src/js/core.js",
-					"bower_components/fancybox/src/js/media.js",
+					//"bower_components/fancybox/src/js/media.js",
+					"src/js/fancybox/media.js",
 					"bower_components/fancybox/src/js/guestures.js",
 					"bower_components/fancybox/src/js/slideshow.js",
 					"bower_components/fancybox/src/js/fullscreen.js",
@@ -532,7 +540,7 @@ module.exports = function(grunt) {
 			//}
 		}
 	});
-	// grunt.registerTask('favicon',	["clean:all", "realFavicon"]);
+	grunt.registerTask('favicon',	["clean", "realFavicon"]);
 	grunt.registerTask('default',	["clean:all", "concat", "uglify", "webfont", "ttf2woff", "ttf2woff2", "imagemin", "tinyimg", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy", "pug"]);
 	grunt.registerTask('dev',		["watch"]);
 	grunt.registerTask('css',		["clean:all", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "pug"]);

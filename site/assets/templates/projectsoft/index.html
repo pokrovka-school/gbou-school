@@ -3,13 +3,25 @@
 	<body>
 		<div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div>
 		<div class="body bvi-no-styles">
-			<header class="container" id="masthead" role="banner">
-				{{@FILE assets/templates/projectsoft/tpl/header.html}}
+			<header class="container main-header" role="banner">
+				<!-- Название-->
+				<div class="header-group">
+					<p class="site-title">ГБОУ ООШ с. Покровка м. р. Кинельский Самарской области</p>
+					<p class="site-description">Мы рады видеть Вас на официальном сайте государственного бюджетного общеобразовательного учреждения основной общеобразовательной школы с. Покровка муниципального района Кинельский Самарской области</p>
+					<!-- Поиск-->
+					<div id="search">
+						<form id="search-form" action="/search/" method="GET">
+							<input class="bvi-no-styles" type="text" name="text" value="" placeholder="Поиск" required="">
+						</form>
+					</div>
+				</div>
+				<!-- Карусель-->
+				<!-- Меню 2-->{{@FILE assets/templates/projectsoft/tpl/header.html}}
 				<@IF:[*id:is(1)*]>
 				{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
 				<@ENDIF>
 			</header>
-			<div class="main">
+			<main class="main">
 				<div class="primary container">
 					<div class="row" id="content" role="main">
 						<article class="container page page-[*id*] type-page clearfix" id="page-[*id*]">
@@ -23,8 +35,8 @@
 						</article>
 					</div>
 				</div>
-				<div class="secondary container" id="secondary" role="complementary"></div>
-			</div>
+				<div class="secondary container" role="complementary"></div>
+			</main>
 		</div>
 		<footer class="footer">footer</footer>
 	</body>
