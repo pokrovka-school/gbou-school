@@ -5,6 +5,8 @@
   --color: #333;
   --padding-column: 15px;
   --margin-column: -15px;
+  --ptsans: "PT Sans", sans-serif;
+  --arial: "Arial", sans-serif;
 }
 html {
   font-family: sans-serif;
@@ -1980,6 +1982,26 @@ input[type="button"].btn-block {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 700;
+}
+
+h1,
+.h1 {
+  font-size: 2.2em;
 }
 
 @media (min-width: 768px) {

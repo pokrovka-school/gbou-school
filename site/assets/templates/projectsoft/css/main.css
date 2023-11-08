@@ -5,11 +5,42 @@
   --color: #333;
   --padding-column: 15px;
   --margin-column: -15px;
+  --ptsans: "PT Sans", sans-serif;
+  --arial: "Arial", sans-serif;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?35a2691be4f8210554ff8b0f34b592fd") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?35a2691be4f8210554ff8b0f34b592fd") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?35a2691be4f8210554ff8b0f34b592fd") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?35a2691be4f8210554ff8b0f34b592fd") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?35a2691be4f8210554ff8b0f34b592fd") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?35a2691be4f8210554ff8b0f34b592fd") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?35a2691be4f8210554ff8b0f34b592fd") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?35a2691be4f8210554ff8b0f34b592fd") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?35a2691be4f8210554ff8b0f34b592fd") format("truetype");
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?35a2691be4f8210554ff8b0f34b592fd") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?35a2691be4f8210554ff8b0f34b592fd") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?35a2691be4f8210554ff8b0f34b592fd") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Pokrovka";
-  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?549789ed9a87e5bb800c53cd40ec4a5a") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?549789ed9a87e5bb800c53cd40ec4a5a") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?549789ed9a87e5bb800c53cd40ec4a5a") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?35a2691be4f8210554ff8b0f34b592fd") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?35a2691be4f8210554ff8b0f34b592fd") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?35a2691be4f8210554ff8b0f34b592fd") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -5888,6 +5919,7 @@ body,
 body {
   background-color: var(--background-color);
   color: var(--color);
+  font-family: var(--ptsans);
 }
 
 .container,
@@ -5939,11 +5971,11 @@ body {
   line-height: 1.4;
   text-shadow: 2px 2px #e6e6e6;
   font-size: 3.125em;
-  font-family: sans-serif, Arial;
+  font-family: var(--ptsans);
 }
 
 .header-group .site-description {
-  font-size: 0.8125em;
+  font-size: 1em;
 }
 
 #search-form {
@@ -5984,6 +6016,26 @@ body {
 #search-form input[type=text]:focus-visible,
 #search-form input[type=text]:focus-within {
   width: 100%;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 700;
+}
+
+h1,
+.h1 {
+  font-size: 2.2em;
 }
 
 @media (min-width: 768px) {
