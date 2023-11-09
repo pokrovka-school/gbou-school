@@ -4,9 +4,7 @@
 			"path": ".",
 			"name": "ГБОУ ООШ с. Покровка",
 			"folder_exclude_patterns": [
-				"bower_components",
 				"dest",
-				"node_modules",
 				"test",
 				"tests",
 				"tmp"

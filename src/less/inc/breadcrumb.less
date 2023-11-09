@@ -1,0 +1,23 @@
+.breadcrumb {
+	margin: 0;
+	font-size: 1.2em;
+	> li {
+		+ li{
+			&:before {
+				padding-right: 0px;
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+			color: var(--link-hover-color);
+		}
+		&,
+		&:active,
+		&:focus {
+			color: var(--link-color);
+		}
+	}
+}

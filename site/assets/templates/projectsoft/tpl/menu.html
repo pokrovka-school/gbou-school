@@ -1,0 +1,35 @@
+
+[!DLMenu?
+	&outerTpl=`@CODE: <div class="header-navigation bvi-no-styles"><nav class="bvi-no-styles" role="navigation" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><button type="button" class="bvi-no-styles"><i class="icon-menu-open bvi-no-styles"></i></button><ul class="[+classNames+] bvi-no-styles" itemprop="about" itemscope itemtype="http://schema.org/ItemList">[+wrap+]</ul></nav></div>`
+	&rowTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+	&rowHereTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+	&parentRowTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"><i class="icon-down bvi-no-styles"></i>[+wrap+]</li>`
+	&parentRowHereTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"><i class="icon-down bvi-no-styles"></i>[+wrap+]</li>`
+	&parentRowActiveTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"><i class="icon-down bvi-no-styles"></i>[+wrap+]</li>`
+	&innerTpl=`@CODE: <ul class="[+classNames+] bvi-no-styles">[+wrap+]</ul>`
+	&innerRowTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+	&innerRowHereTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+	&parents=`0`
+	&&addWhereList=`hidemenu = 0 AND parent NOT IN(2, 98, 57)`
+	&showParent=`1`
+	&innerClass=`inner`
+	&outerClass=`outer`
+	&rowClass=``
+	&firstClass=``
+	&lastClass=``
+	&levelClass=``
+	&webLinkClass=`web-link`
+	&parentClass=`parent`
+	&hereClass=`here`
+	&activeClass=`active`
+	&oddClass=``
+	&evenClass=``
+	&stateClass=`stateClass`
+	&&urlScheme=`full`
+!]
+<@IF:[*id:neq(1)*]>
+[!DLCrumbs
+	&showCurrent=`1`
+	&ownerTPL=`@CODE:<nav><ul class="breadcrumb bvi-no-styles" aria-label="Breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">[+crumbs.wrap+]</ul></nav>`
+!]
+<@ENDIF>

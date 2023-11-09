@@ -2,42 +2,61 @@
 <html lang="ru" prefix="og: http://ogp.me/ns#">{{@FILE assets/templates/projectsoft/tpl/head.html}}
 	<body>
 		<div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div>
-		<div class="body bvi-no-styles">
-			<header class="container main-header" role="banner">
-				<!-- Название-->
-				<div class="header-group">
-					<p class="site-title">ГБОУ ООШ с. Покровка м. р. Кинельский Самарской области</p>
-					<p class="site-description">Мы рады видеть Вас на официальном сайте государственного бюджетного общеобразовательного учреждения основной общеобразовательной школы с. Покровка муниципального района Кинельский Самарской области</p>
-					<!-- Поиск-->
-					<div id="search">
-						<form id="search-form" action="/search/" method="GET">
-							<input class="bvi-no-styles" type="text" name="text" value="" placeholder="Поиск" required="">
-						</form>
+		<div class="pagewrapper">
+			<div class="body bvi-no-styles">
+				<header class="container main-header" role="banner">
+					<!-- Название-->
+					<div class="header-group" role="generic">
+						<p class="site-title">[(site_name)]</p>
+						<p class="site-description">[(site_description)]</p>
+						<!-- Поиск-->
+						<div id="search" role="search">
+							<form id="search-form" action="/search/" method="GET" role="form">
+								<input class="bvi-no-styles" type="text" name="text" value="[!$_GET['text']!]" placeholder="Поиск" required="required" role="textbox">
+							</form>
+						</div>
 					</div>
-				</div>
-				<!-- Карусель-->
-				<!-- Меню 2-->{{@FILE assets/templates/projectsoft/tpl/header.html}}
-				<@IF:[*id:is(1)*]>
-				{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
-				<@ENDIF>
-			</header>
-			<main class="main">
-				<div class="primary container">
-					<div class="row" id="content" role="main">
-						<article class="container page page-[*id*] type-page clearfix" id="page-[*id*]">
-							<header class="entry-header">
-								<h1 class="entry-title">[*longtitle:ifempty=`[*pagetitle*]`*]</h1>
-							</header>
-							<div class="entry-content">
-								[*content*]
-								[[PageBuilder]]
+					<!-- Карусель-->[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery`]]
+					<!-- Меню 2-->{{@FILE assets/templates/projectsoft/tpl/menu.html}}
+					<!-- Госуслуги только на главной--><@IF:[*id:is(1)*]>
+					{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+					<@ENDIF>
+				</header>
+				<main class="main">
+					<div class="primary" role="main">
+						<div class="container">
+							<div class="row" id="content">
+								<article class="container page page-[*id*] type-page clearfix" id="page-[*id*]" role="article">
+									<header class="entry-header" role="generic">
+										<h1 class="entry-title">[*longtitle:ifempty=`[*pagetitle*]`*]</h1>
+									</header>
+									<div class="entry-content">
+										[*content*]
+										[[PageBuilder]]
+									</div>
+								</article>
 							</div>
-						</article>
+						</div>
 					</div>
-				</div>
-				<div class="secondary container" role="complementary"></div>
-			</main>
-		</div>
-		<footer class="footer">footer</footer>
+					<div class="secondary secondary-right" role="complementary">
+						<div class="container">
+							<div class="widgets row">
+								<div class="widget">Widgets Right</div>
+							</div>
+						</div>
+					</div>
+					<div class="secondary secondary-left" role="complementary">
+						<div class="container">
+							<div class="widgets row">
+								<div class="widget">Widgets Left</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+			<footer class="footer bvi-no-styles">
+				<div class="footer-wrapper container">footer</div>
+			</footer>
+		</div>{{@FILE assets/templates/projectsoft/tpl/scripts.html}}
 	</body>
 </html>

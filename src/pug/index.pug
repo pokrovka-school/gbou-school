@@ -3,34 +3,49 @@ html(lang="ru" prefix="og: http://ogp.me/ns#")
 	|{{@FILE assets/templates/projectsoft/tpl/head.html}}
 	body
 		include inc/eya.pug
-		.body.bvi-no-styles
-			header.container.main-header(role="banner")
-				// Название
-				div.header-group
-					p.site-title
-						|ГБОУ ООШ с. Покровка м. р. Кинельский Самарской области
-					p.site-description
-						|Мы рады видеть Вас на официальном сайте государственного бюджетного общеобразовательного учреждения основной общеобразовательной школы с. Покровка муниципального района Кинельский Самарской области
-					// Поиск
-					div#search
-						form#search-form(action="/search/" method="GET")
-							input.bvi-no-styles(type="text" name="text" value="" placeholder="Поиск" required="")
-				// Карусель
-				// Меню 2
-				|{{@FILE assets/templates/projectsoft/tpl/header.html}}
-				|<@IF:[*id:is(1)*]>
-				|{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
-				|<@ENDIF>
-			main.main
-				.primary.container
-					#content.row(role="main")
-						article.container(id!="page-[*id*]" class!="page page-[*id*] type-page clearfix")
-							header.entry-header
-								h1.entry-title
-									|[*longtitle:ifempty=`[*pagetitle*]`*]
-							.entry-content
-								|[*content*]
-								|[[PageBuilder]]
-				.secondary.container(role="complementary")
-		footer.footer
-			|footer
+		.pagewrapper
+			.body.bvi-no-styles
+				header.container.main-header(role="banner")
+					// Название
+					div.header-group(role="generic")
+						p.site-title
+							|[(site_name)]
+						p.site-description
+							|[(site_description)]
+						// Поиск
+						div#search(role="search")
+							form#search-form(action="/search/" method="GET" role="form")
+								input.bvi-no-styles(type="text" name="text" value="[!$_GET['text']!]" placeholder="Поиск" required="required" role="textbox")
+					// Карусель
+					|[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery`]]
+					// Меню 2
+					|{{@FILE assets/templates/projectsoft/tpl/menu.html}}
+					// Госуслуги только на главной
+					|<@IF:[*id:is(1)*]>
+					|{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+					|<@ENDIF>
+				main.main
+					.primary(role="main")
+						.container
+							#content.row
+								article.container(id!="page-[*id*]" class!="page page-[*id*] type-page clearfix" role="article")
+									header.entry-header(role="generic")
+										h1.entry-title
+											|[*longtitle:ifempty=`[*pagetitle*]`*]
+									.entry-content
+										|[*content*]
+										|[[PageBuilder]]
+					.secondary.secondary-right(role="complementary")
+						.container
+							.widgets.row
+								.widget
+									|Widgets Right
+					.secondary.secondary-left(role="complementary")
+						.container
+							.widgets.row
+								.widget
+									|Widgets Left
+			footer.footer.bvi-no-styles
+				.footer-wrapper.container
+					|footer
+		|{{@FILE assets/templates/projectsoft/tpl/scripts.html}}

@@ -7,6 +7,7 @@
   --margin-column: -15px;
   --ptsans: "PT Sans", sans-serif;
   --arial: "Arial", sans-serif;
+  --body-width: 1425px;
 }
 html {
   font-family: sans-serif;
@@ -1982,6 +1983,32 @@ input[type="button"].btn-block {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+img,
+video,
+audio,
+iframe,
+object {
+  max-width: 100%;
+}
+
+.pagewrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pagewrapper .body {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.pagewrapper .footer {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 h1,
