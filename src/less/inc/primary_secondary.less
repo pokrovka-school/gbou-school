@@ -2,9 +2,16 @@ main.main {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: var(--padding-column);
+	padding-right: var(--padding-column);
+}
+#content {
+	padding-left: var(--padding-column);
+	padding-right: var(--padding-column);
 }
 .secondary {
-	width: 300px;
+	width: 320px;
 	&-right {
 		order: 3;
 	}
@@ -13,14 +20,14 @@ main.main {
 	}
 }
 .primary {
-	width: ~'calc(100% - 600px)';
+	width: ~'calc(100% - 640px)';
 	overflow: hidden;
 	order: 2;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1280px) {
 	.secondary {
 		&-left {
-			width: 100%;
+			width: ~'calc(100% - 320px)';
 			order: 3;
 		}
 		&-right {
@@ -28,13 +35,35 @@ main.main {
 		}
 	}
 	.primary {
-		width: ~'calc(100% - 300px)';
-		orde: 1;
+		width: ~'calc(100% - 320px)';
+		order: 1;
 	}
 }
 @media (max-width: 990px) {
 	.secondary {
 		&-left {
+			width: 48%;
+			order: 3;
+		}
+		&-right {
+			width: 48%;
+			order: 2;
+		}
+	}
+	.primary {
+		width: ~'calc(100% + 30px)';
+		margin-left: var(--margin-column);
+		margin-right: var(--margin-column);
+		order: 1;
+		#content {
+			padding-left: unset;
+			padding-right: unset;
+		}
+	}
+}
+@media (max-width: 710px) {
+	.secondary {
+		&-left {
 			width: 100%;
 			order: 3;
 		}
@@ -42,9 +71,5 @@ main.main {
 			width: 100%;
 			order: 2;
 		}
-	}
-	.primary {
-		width: 100%;
-		orde: 1;
 	}
 }

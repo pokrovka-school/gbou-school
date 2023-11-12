@@ -32,6 +32,7 @@ html(dir="ltr" lang="ru" prefix="og: http://ogp.me/ns#")
 								|   &urlScheme=`full`
 								|   &noneWrapOuter=`0`
 								|]]
-				|{{@FILE assets/templates/projectsoft/tpl/secondary.html}}
-			|{{@FILE assets/templates/projectsoft/tpl/footer.html}}
-		|{{@FILE assets/templates/projectsoft/tpl/scripts.html}}
+					include inc/secondary.pug
+				include inc/sitelinks.pug
+			include inc/footer.pug
+		include inc/scripts.pug

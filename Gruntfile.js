@@ -453,8 +453,8 @@ module.exports = function(grunt) {
 			serv: {
 				options: {
 					client: false,
-					pretty: '\t',
-					separator:  '\n',
+					//pretty: '\t',
+					//separator:  '\n',
 					data: function(dest, src) {
 						return {
 							"base": "[(site_url)]",
@@ -481,8 +481,8 @@ module.exports = function(grunt) {
 			tpl: {
 				options: {
 					client: false,
-					pretty: '\t',
-					separator:  '\n',
+					//pretty: '\t',
+					//separator:  '\n',
 					data: function(dest, src) {
 						return {
 							"base": "[(site_url)]",

@@ -1,7 +1,9 @@
-.eya-panel {
-	position: absolute;
-	top: 10px;
-	right: 15px;
+.main-header {
+	.eya-panel {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+	}
 }
 html body {
 	&.bvi-active {
@@ -14,6 +16,33 @@ html body {
 			}
 			&-body {
 				padding: initial;
+			}
+		}
+	}
+}
+.widget {
+	&.eya-panel {
+		.button-eye {
+			display: block;
+			// white-space: nowrap;
+			text-decoration: none !important;
+			color: #efefef !important;
+			background-color: #d50400 !important;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 15px;
+			padding-right: 15px;
+			max-width: 290px;
+			transition: color .3s ease, background-color .3s ease;
+			&:hover {
+				color: #ffffff !important;
+				background-color: #ff0000 !important;
+			}
+			.text-center();
+			.icon-eye,
+			.icon-eye-new {
+				display: inline-block;
+				margin-right: 5px;
 			}
 		}
 	}
