@@ -12,21 +12,21 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
@@ -34,14 +34,14 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pokrovka";
-  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -352,6 +352,33 @@
   hyphenate-limit-lines: 2;
   hyphenate-limit-last: always;
   hyphenate-limit-zone: 8%;
+}
+
+.clearfix::before,
+.clearfix::after,
+.dl-horizontal dd::before,
+.dl-horizontal dd::after,
+.form-horizontal .form-group::before,
+.form-horizontal .form-group::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.clearfix:before,
+.clearfix:after,
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:after {
+  clear: both;
 }
 html {
   font-family: sans-serif;
@@ -5989,11 +6016,14 @@ object {
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #0098ff;
 }
 
 .pagewrapper .body {
   -ms-flex-positive: 1;
   flex-grow: 1;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #cccccc;
 }
 
 .pagewrapper .footer {
@@ -6026,6 +6056,37 @@ body {
   padding-right: var(--padding-column);
 }
 
+.container::before,
+.container-full::before,
+.container::after,
+.container-full::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.container::before,
+.container-full::before,
+.container::after,
+.container-full::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.container:before,
+.container-full:before,
+.container:after,
+.container-full:after {
+  display: table;
+  content: " ";
+}
+
+.container:after,
+.container-full:after {
+  clear: both;
+}
+
 .container:before,
 .container-full:before,
 .container:after,
@@ -6042,6 +6103,30 @@ body {
 .row {
   margin-left: var(--margin-column);
   margin-right: var(--margin-column);
+}
+
+.row::before,
+.row::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.row::before,
+.row::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
 }
 
 .row:before,
@@ -6092,6 +6177,30 @@ header.main-header {
   margin-bottom: 0;
   display: block;
   text-align: center;
+}
+
+.header-navigation::before,
+.header-navigation::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.header-navigation::before,
+.header-navigation::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.header-navigation:before,
+.header-navigation:after {
+  display: table;
+  content: " ";
+}
+
+.header-navigation:after {
+  clear: both;
 }
 
 .header-navigation:before,
@@ -6309,6 +6418,30 @@ header.main-header {
   display: block;
 }
 
+#search-form::before,
+#search-form::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+#search-form::before,
+#search-form::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+#search-form:before,
+#search-form:after {
+  display: table;
+  content: " ";
+}
+
+#search-form:after {
+  clear: both;
+}
+
 #search-form:before,
 #search-form:after {
   display: table;
@@ -6435,6 +6568,58 @@ main.main {
 
 .widget:last-child {
   padding-bottom: 0;
+}
+
+.sitelinks {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.sites {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: var(--padding-column);
+  padding-right: var(--padding-column);
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sites .sites-link {
+  padding-left: var(--padding-column);
+  padding-right: var(--padding-column);
+  padding-top: var(--padding-column);
+  padding-bottom: var(--padding-column);
+}
+
+.sites .sites-link a {
+  display: block;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.sites .sites-link a img {
+  box-shadow: 0 0 1px #333;
+  display: block;
+}
+
+.sites .sites-link a:hover {
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.sites .sites-link a:hover img {
+  box-shadow: 0 0 3px #ccc;
 }
 
 .footer {

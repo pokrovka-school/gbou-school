@@ -1,7 +1,7 @@
 <?php
 return [
-	'caption'  => 'SEO',
-	'introtext' => 'Настройки для SEO',
+	'caption'  => 'ДАННЫЕ ШКОЛЫ',
+	'introtext' => 'Данные школы',
 	'settings' => [
 		'site_description' => [
 			'caption' => 'Приветственное сообщение на сайте',
@@ -13,11 +13,9 @@ return [
 			'caption' => 'Карусель станицы',
 			'type'  => 'custom_tv:multitv',
 		],
-		'yandex_counter' => [
-			'caption' => 'ID Yandex счётчика',
-			'type'  => 'text',
-			'note'  => '',
-			'default_text' => '',
+		'site_links' => [
+			'caption' => 'Сайты',
+			'type'  => 'custom_tv:multitv',
 		],
 	]
 ];

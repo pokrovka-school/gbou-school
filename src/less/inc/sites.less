@@ -1,0 +1,40 @@
+.sitelinks {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.sites {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-left: var(--padding-column);
+	padding-right: var(--padding-column);
+	justify-content: center;
+	align-items: flex-start;
+	max-width:1280px;
+	margin-left: auto;
+	margin-right: auto;
+	.sites {
+		&-link {
+			padding-left: var(--padding-column);
+			padding-right: var(--padding-column);
+			padding-top: var(--padding-column);
+			padding-bottom: var(--padding-column);
+			a {
+				display: block;
+				text-decoration: none !important;
+				transition: all .3s ease;
+				transform: scale(1);
+				img {
+					box-shadow: 0 0 1px #333;
+					display: block;
+				}
+				&:hover {
+					transform: scale(1.2);
+					img {
+						box-shadow: 0 0 3px #ccc;
+					}
+				}
+			}
+		}
+	}
+}

@@ -2,15 +2,15 @@
 $settings['display'] = 'vertical';
 $settings['fields'] = array(
 	'title' => array(
-		'caption' => 'Title',
+		'caption' => 'Заголовок',
 		'type' => 'text'
 	),
 	'image' => array(
-		'caption' => 'Image',
+		'caption' => 'Изображение',
 		'type' => 'image'
 	),
 	'thumb' => array(
-		'caption' => 'Thumbnail',
+		'caption' => 'Перевьюшка',
 		'type' => 'thumb',
 		'thumbof' => 'image'
 	)

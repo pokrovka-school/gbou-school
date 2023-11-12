@@ -12,21 +12,21 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
@@ -34,14 +34,14 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pokrovka";
-  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?2d6879d18805dff8d9c7722545809d09") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?2d6879d18805dff8d9c7722545809d09") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?2d6879d18805dff8d9c7722545809d09") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -352,6 +352,33 @@
   hyphenate-limit-lines: 2;
   hyphenate-limit-last: always;
   hyphenate-limit-zone: 8%;
+}
+
+.clearfix::before,
+.clearfix::after,
+.dl-horizontal dd::before,
+.dl-horizontal dd::after,
+.form-horizontal .form-group::before,
+.form-horizontal .form-group::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.clearfix:before,
+.clearfix:after,
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:after {
+  clear: both;
 }
 html {
   font-family: sans-serif;
@@ -2343,11 +2370,14 @@ object {
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #0098ff;
 }
 
 .pagewrapper .body {
   -ms-flex-positive: 1;
   flex-grow: 1;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #cccccc;
 }
 
 .pagewrapper .footer {
