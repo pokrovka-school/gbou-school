@@ -1,0 +1,20 @@
+header.container.main-header(role="banner")
+	// Название
+	div.header-group(role="generic")
+		p.site-title
+			|[(site_name)]
+		p.site-description
+			|[(site_description)]
+		// Поиск
+		div#search(role="search")
+			form#search-form(action="/search/" method="GET" role="form")
+				input.bvi-no-styles(type="text" name="text" value="[!$_GET['text']!]" placeholder="Поиск" required="required" role="textbox")
+	include eya.pug
+	// Карусель
+	|[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery`]]
+	// Меню 2
+	|{{@FILE assets/templates/projectsoft/tpl/menu.html}}
+	// Госуслуги только на главной
+	|<@IF:[*id:is(1)*]>
+	|{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+	|<@ENDIF>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru" prefix="og: http://ogp.me/ns#">{{@FILE assets/templates/projectsoft/tpl/head.html}}
+<html dir="ltr" lang="ru" prefix="og: http://ogp.me/ns#">{{@FILE assets/templates/projectsoft/tpl/head.html}}
 	<body>
-		<div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div>
 		<div class="pagewrapper">
 			<div class="body bvi-no-styles">
 				<header class="container main-header" role="banner">
@@ -16,6 +15,7 @@
 							</form>
 						</div>
 					</div>
+					<div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div>
 					<!-- Карусель-->[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery`]]
 					<!-- Меню 2-->{{@FILE assets/templates/projectsoft/tpl/menu.html}}
 					<!-- Госуслуги только на главной--><@IF:[*id:is(1)*]>
@@ -37,26 +37,9 @@
 								</article>
 							</div>
 						</div>
-					</div>
-					<div class="secondary secondary-right" role="complementary">
-						<div class="container">
-							<div class="widgets row">
-								<div class="widget">Widgets Right</div>
-							</div>
-						</div>
-					</div>
-					<div class="secondary secondary-left" role="complementary">
-						<div class="container">
-							<div class="widgets row">
-								<div class="widget">Widgets Left</div>
-							</div>
-						</div>
-					</div>
+					</div>{{@FILE assets/templates/projectsoft/tpl/secondary.html}}
 				</main>
-			</div>
-			<footer class="footer bvi-no-styles">
-				<div class="footer-wrapper container">footer</div>
-			</footer>
+			</div>{{@FILE assets/templates/projectsoft/tpl/footer.html}}
 		</div>{{@FILE assets/templates/projectsoft/tpl/scripts.html}}
 	</body>
 </html>

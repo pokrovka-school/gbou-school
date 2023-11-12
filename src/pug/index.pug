@@ -1,29 +1,10 @@
 doctype html
-html(lang="ru" prefix="og: http://ogp.me/ns#")
+html(dir="ltr" lang="ru" prefix="og: http://ogp.me/ns#")
 	|{{@FILE assets/templates/projectsoft/tpl/head.html}}
 	body
-		include inc/eya.pug
 		.pagewrapper
 			.body.bvi-no-styles
-				header.container.main-header(role="banner")
-					// Название
-					div.header-group(role="generic")
-						p.site-title
-							|[(site_name)]
-						p.site-description
-							|[(site_description)]
-						// Поиск
-						div#search(role="search")
-							form#search-form(action="/search/" method="GET" role="form")
-								input.bvi-no-styles(type="text" name="text" value="[!$_GET['text']!]" placeholder="Поиск" required="required" role="textbox")
-					// Карусель
-					|[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery`]]
-					// Меню 2
-					|{{@FILE assets/templates/projectsoft/tpl/menu.html}}
-					// Госуслуги только на главной
-					|<@IF:[*id:is(1)*]>
-					|{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
-					|<@ENDIF>
+				include inc/header.pug
 				main.main
 					.primary(role="main")
 						.container
@@ -35,17 +16,6 @@ html(lang="ru" prefix="og: http://ogp.me/ns#")
 									.entry-content
 										|[*content*]
 										|[[PageBuilder]]
-					.secondary.secondary-right(role="complementary")
-						.container
-							.widgets.row
-								.widget
-									|Widgets Right
-					.secondary.secondary-left(role="complementary")
-						.container
-							.widgets.row
-								.widget
-									|Widgets Left
-			footer.footer.bvi-no-styles
-				.footer-wrapper.container
-					|footer
+					|{{@FILE assets/templates/projectsoft/tpl/secondary.html}}
+			|{{@FILE assets/templates/projectsoft/tpl/footer.html}}
 		|{{@FILE assets/templates/projectsoft/tpl/scripts.html}}

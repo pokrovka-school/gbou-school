@@ -3,3 +3,18 @@
 	top: 10px;
 	right: 15px;
 }
+html body {
+	&.bvi-active {
+		.bvi {
+			&-panel {
+				position: sticky;
+				top: 0;
+				width: 100%;
+				left: 0;
+			}
+			&-body {
+				padding: initial;
+			}
+		}
+	}
+}

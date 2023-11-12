@@ -1,5 +1,6 @@
 bower_components
 node_modules
+temp
 test
 tests
 tmp
@@ -16,6 +17,7 @@ site/*.php
 site/*.md
 site/*.html
 site/*.access
+site/*.lock
 
 site/*.png
 site/*.svg

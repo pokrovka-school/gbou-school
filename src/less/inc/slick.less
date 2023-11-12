@@ -1,24 +1,22 @@
+// Соотношение сторон
+// 1395 450
+@slick-ratio: ~'31/10';
+
+.slick {
+	&-home {
+		position: relative;
+		overflow: hidden;
+		aspect-ratio: @slick-ratio;
+	}
+}
 #slick {
+	position: relative;
+	aspect-ratio: @slick-ratio;
+	overflow: hidden;
 	.slick {
-		/*&-slide {
-			max-width: 100%;
-			width: 100% !important;
-		}*/
+		// 1395 450
 		&-item {
 			display: block !important;
 		}
-	}
-	.slick-list {
-		position: relative;
-		overflow: hidden;
-		display: block;
-		margin: 0;
-		padding: 0;
-	}
-}
-.slick {
-	&-home {
-		/*width: 100%;*/
-		overflow: hidden;
 	}
 }

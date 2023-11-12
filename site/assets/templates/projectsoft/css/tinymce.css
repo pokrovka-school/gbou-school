@@ -9,6 +9,350 @@
   --arial: "Arial", sans-serif;
   --body-width: 1425px;
 }
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pokrovka";
+  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?53f668652352bbd60ac3c07efb17d795") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?53f668652352bbd60ac3c07efb17d795") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?53f668652352bbd60ac3c07efb17d795") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "Pokrovka" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-begin:before {
+  content: "\e900";
+}
+
+.icon-bell:before {
+  content: "\e901";
+}
+
+.icon-best-banner:before {
+  content: "\e902";
+}
+
+.icon-best-video:before {
+  content: "\e903";
+}
+
+.icon-blockquote:before {
+  content: "\e904";
+}
+
+.icon-calendar:before {
+  content: "\e905";
+}
+
+.icon-callme:before {
+  content: "\e906";
+}
+
+.icon-check:before {
+  content: "\e907";
+}
+
+.icon-checkbox:before {
+  content: "\e908";
+}
+
+.icon-chrome:before {
+  content: "\e909";
+}
+
+.icon-circle-close:before {
+  content: "\e90a";
+}
+
+.icon-close:before {
+  content: "\e90b";
+}
+
+.icon-copy:before {
+  content: "\e90c";
+}
+
+.icon-down:before {
+  content: "\e90d";
+}
+
+.icon-download-pdf:before {
+  content: "\e90e";
+}
+
+.icon-download:before {
+  content: "\e90f";
+}
+
+.icon-email:before {
+  content: "\e910";
+}
+
+.icon-end:before {
+  content: "\e911";
+}
+
+.icon-error:before {
+  content: "\e912";
+}
+
+.icon-event-calendar:before {
+  content: "\e913";
+}
+
+.icon-eye-new:before {
+  content: "\e914";
+}
+
+.icon-eye:before {
+  content: "\e915";
+}
+
+.icon-facebook:before {
+  content: "\e916";
+}
+
+.icon-fbs:before {
+  content: "\e917";
+}
+
+.icon-firefox:before {
+  content: "\e918";
+}
+
+.icon-github:before {
+  content: "\e919";
+}
+
+.icon-google:before {
+  content: "\e91a";
+}
+
+.icon-home:before {
+  content: "\e91b";
+}
+
+.icon-icofb:before {
+  content: "\e91c";
+}
+
+.icon-icoinsta:before {
+  content: "\e91d";
+}
+
+.icon-icook:before {
+  content: "\e91e";
+}
+
+.icon-icosk:before {
+  content: "\e91f";
+}
+
+.icon-icotg:before {
+  content: "\e920";
+}
+
+.icon-icotw:before {
+  content: "\e921";
+}
+
+.icon-icovb:before {
+  content: "\e922";
+}
+
+.icon-icovk:before {
+  content: "\e923";
+}
+
+.icon-icoyt:before {
+  content: "\e924";
+}
+
+.icon-image:before {
+  content: "\e925";
+}
+
+.icon-menu-close:before {
+  content: "\e926";
+}
+
+.icon-menu-open:before {
+  content: "\e927";
+}
+
+.icon-modx:before {
+  content: "\e928";
+}
+
+.icon-next:before {
+  content: "\e929";
+}
+
+.icon-ok:before {
+  content: "\e92a";
+}
+
+.icon-oks:before {
+  content: "\e92b";
+}
+
+.icon-opera:before {
+  content: "\e92c";
+}
+
+.icon-phone:before {
+  content: "\e92d";
+}
+
+.icon-photo:before {
+  content: "\e92e";
+}
+
+.icon-prev:before {
+  content: "\e92f";
+}
+
+.icon-print-ic:before {
+  content: "\e930";
+}
+
+.icon-print:before {
+  content: "\e931";
+}
+
+.icon-required:before {
+  content: "\e932";
+}
+
+.icon-reset:before {
+  content: "\e933";
+}
+
+.icon-rss-logo:before {
+  content: "\e934";
+}
+
+.icon-rss:before {
+  content: "\e935";
+}
+
+.icon-rutube:before {
+  content: "\e936";
+}
+
+.icon-search:before {
+  content: "\e937";
+}
+
+.icon-share:before {
+  content: "\e938";
+}
+
+.icon-success:before {
+  content: "\e939";
+}
+
+.icon-telegram:before {
+  content: "\e93a";
+}
+
+.icon-twitter:before {
+  content: "\e93b";
+}
+
+.icon-tws:before {
+  content: "\e93c";
+}
+
+.icon-up:before {
+  content: "\e93d";
+}
+
+.icon-vk:before {
+  content: "\e93e";
+}
+
+.icon-vks:before {
+  content: "\e93f";
+}
+
+.icon-zoom-in:before {
+  content: "\e940";
+}
+
+.icon-zoom-out:before {
+  content: "\e941";
+}
+
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-zone: 8%;
+  -moz-hyphens: auto;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-zone: 8%;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -2015,20 +2359,47 @@ h1,
 .h1,
 h2,
 .h2,
-h,
+h3,
 .h3,
 h4,
 .h4,
 h5,
 .h5,
 h6,
-.h6 {
+.h6,
+strong,
+b {
   font-weight: 700;
 }
 
 h1,
 .h1 {
-  font-size: 2.2em;
+  font-size: 46px;
+}
+
+h2,
+.h2 {
+  font-size: 40px;
+}
+
+h3,
+.h3 {
+  font-size: 34px;
+}
+
+h4,
+.h4 {
+  font-size: 28px;
+}
+
+h5,
+.h5 {
+  font-size: 22px;
+}
+
+h6,
+.h6 {
+  font-size: 18px;
 }
 
 @media (min-width: 768px) {

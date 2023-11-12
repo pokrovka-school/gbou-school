@@ -13,11 +13,43 @@
 					text-shadow: 2px 2px #e6e6e6;
 					font-size: 3.31em;
 					font-family: var(--ptsans);
+					transition: font-size .3s ease;
+					@media (max-width: 910px) {
+						font-size: 2em;
+					}
 			}
 			&-description {
 				font-size: 1.2em;
 				margin-bottom: 10px;
 			}
+		}
+	}
+}
+body .bvi-body[data-bvi-fontsize] {
+	.header{
+		&-group {
+			.site {
+				&-title {
+						font-size: 3.31em !important;
+						font-family: var(--ptsans);
+						@media (max-width: 910px) {
+							font-size: 2em !important;
+						}
+				}
+				&-description {
+					font-size: 1.2em !important;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+header {
+	&.main {
+		&-header {
+			// padding-left: unset;
+			// padding-right: unset;
+			position: relative;
 		}
 	}
 }

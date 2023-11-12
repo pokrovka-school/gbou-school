@@ -52,6 +52,12 @@ module.exports = function(grunt) {
 				'site/*svg',
 				'site/*.xml',
 				'site/*.webmanifest'
+			],
+			templates: [
+				'test/',
+				'tests/',
+				'site/html_code.html',
+				gc.gosave
 			]
 		},
 		realFavicon: {
@@ -541,7 +547,7 @@ module.exports = function(grunt) {
 		}
 	});
 	grunt.registerTask('favicon',	["clean", "realFavicon"]);
-	grunt.registerTask('default',	["clean:all", "concat", "uglify", "webfont", "ttf2woff", "ttf2woff2", "imagemin", "tinyimg", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy", "pug"]);
+	grunt.registerTask('default',	["clean:templates", "concat", "uglify", "webfont", "ttf2woff", "ttf2woff2", "imagemin", "tinyimg", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy", "pug"]);
 	grunt.registerTask('dev',		["watch"]);
 	grunt.registerTask('css',		["clean:all", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "pug"]);
 	grunt.registerTask('images',	["imagemin", "tinyimg", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "pug"]);

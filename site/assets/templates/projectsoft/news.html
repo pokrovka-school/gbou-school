@@ -1,53 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru" prefix="og: http://ogp.me/ns#">{{@FILE assets/templates/projectsoft/tpl/head.html}}
+<html dir="ltr" lang="ru" prefix="og: http://ogp.me/ns#">{{@FILE assets/templates/projectsoft/tpl/head.html}}
 	<body>
-		<div class="body bvi-no-styles">
-			<div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div>
-			<header id="masthead" role="banner">{{@FILE assets/templates/projectsoft/tpl/header.html}}</header>
-			<div class="main">
-				<div class="primary">
-					<div id="content" role="main">
-						<article class="page page-[*id*] type-page clearfix" id="page-[*id*]"><@IF:[*id:neq(1)*]>
-							<header class="entry-header">
-								<h1 class="entry-title">[*longtitle:ifempty=`[*pagetitle*]`*]</h1>
-							</header><@ENDIF>
-							<div class="entry-content">
-								<@IF:[*id:is(1)*]>
-								{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
-								<@ENDIF>
-								[*content*]
-								<p class="clearfix"></p>
-							</div>
-						</article>
-						<article class="page page-home-news type-page">
-							<header class="entry-header">
-								<h2 class="text-center entry-title page-h2-title">Новости школы</h2>
-							</header>[[DocLister?
-							  &parents=`2`
-							  &display=`[(news_count_home)]`
-							  &tvList=`imageSoc, news_date`
-							  &tvPrefix=``
-							  &orderBy=`news_date DESC`
-							  &sortBy=`news_date`
-							  &sortDir=`DESC`
-							  &tvSortType=`TVDATETIME`
-							  &prepare=`\ProjectSoft\PrepareDL::prepareItem`
-							  &noneTPL=``
-							  &ownerTPL=`@FILE:projectsoft/tpl/news_owner`
-							  &tpl=`@FILE:projectsoft/tpl/news_tpl`
-							  &showParent=`0`
-							  &urlScheme=`full`
-							  &noneWrapOuter=`0`
-							]]
-						</article>
+		<div class="pagewrapper">
+			<div class="body bvi-no-styles">
+				<header class="container main-header" role="banner">
+					<!-- Название-->
+					<div class="header-group" role="generic">
+						<p class="site-title">[(site_name)]</p>
+						<p class="site-description">[(site_description)]</p>
+						<!-- Поиск-->
+						<div id="search" role="search">
+							<form id="search-form" action="/search/" method="GET" role="form">
+								<input class="bvi-no-styles" type="text" name="text" value="[!$_GET['text']!]" placeholder="Поиск" required="required" role="textbox">
+							</form>
+						</div>
 					</div>
-				</div>
-				<div class="secondary" id="secondary" role="complementary">
-					<!--|{{@FILE assets/templates/projectsoft/tpl/widgets.html}}-->
-				</div>
-				<div class="main-footer">
-					<!--|{{@FILE assets/templates/projectsoft/tpl/sites_link.html}} -->
-				</div>
+					<div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div>
+					<!-- Карусель-->[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery`]]
+					<!-- Меню 2-->{{@FILE assets/templates/projectsoft/tpl/menu.html}}
+					<!-- Госуслуги только на главной--><@IF:[*id:is(1)*]>
+					{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+					<@ENDIF>
+				</header>
+				<main class="main">
+					<div class="primary" role="main">
+						<div class="container">
+							<div class="row" id="content">
+								<article class="container page page-[*id*] type-page clearfix" id="page-[*id*]" role="article">
+									<header class="entry-header" role="generic">
+										<h1 class="entry-title">[*longtitle:ifempty=`[*pagetitle*]`*]</h1>
+									</header>
+									<div class="entry-content">[*content*]</div>
+								</article>[[DocLister?
+								  &parents=`2`
+								  &display=`[(news_count_home)]`
+								  &tvList=`imageSoc, news_date`
+								  &tvPrefix=``
+								  &orderBy=`news_date DESC`
+								  &sortBy=`news_date`
+								  &sortDir=`DESC`
+								  &tvSortType=`TVDATETIME`
+								  &prepare=`\ProjectSoft\PrepareDL::prepareItem`
+								  &noneTPL=``
+								  &ownerTPL=`@FILE:projectsoft/tpl/news_owner`
+								  &tpl=`@FILE:projectsoft/tpl/news_tpl`
+								  &showParent=`0`
+								  &urlScheme=`full`
+								  &noneWrapOuter=`0`
+								]]
+							</div>
+						</div>
+					</div>
+				</main>{{@FILE assets/templates/projectsoft/tpl/secondary.html}}
 			</div>{{@FILE assets/templates/projectsoft/tpl/footer.html}}
 		</div>{{@FILE assets/templates/projectsoft/tpl/scripts.html}}
 	</body>
