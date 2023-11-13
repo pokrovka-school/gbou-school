@@ -12,21 +12,21 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?acffd353611fa2c6a9aa07c3ea4387e3") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?acffd353611fa2c6a9aa07c3ea4387e3") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?acffd353611fa2c6a9aa07c3ea4387e3") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?acffd353611fa2c6a9aa07c3ea4387e3") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?acffd353611fa2c6a9aa07c3ea4387e3") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?acffd353611fa2c6a9aa07c3ea4387e3") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?acffd353611fa2c6a9aa07c3ea4387e3") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?acffd353611fa2c6a9aa07c3ea4387e3") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?acffd353611fa2c6a9aa07c3ea4387e3") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
@@ -34,14 +34,14 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?acffd353611fa2c6a9aa07c3ea4387e3") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?acffd353611fa2c6a9aa07c3ea4387e3") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?acffd353611fa2c6a9aa07c3ea4387e3") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pokrovka";
-  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?acffd353611fa2c6a9aa07c3ea4387e3") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?acffd353611fa2c6a9aa07c3ea4387e3") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?acffd353611fa2c6a9aa07c3ea4387e3") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
