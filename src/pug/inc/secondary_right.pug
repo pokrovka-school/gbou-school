@@ -1,0 +1,89 @@
+// Правая колонка
+.secondary.secondary-right(role="complementary")
+	.container
+		.widgets.row
+			.widget.eya-panel.bvi-no-styles
+				a.bvi-no-styles.button-eye(href="javascript:;")
+					i.bvi-no-styles.icon-eye-new
+					|Версия для слабовидящих
+			.widget.bvi-no-styles.widget_director
+				.widget_director-header
+					h4.widget_director-title
+						strong
+							|[(manager_position)]
+					h5.widget_director-header-name
+						|[(manager_name)]
+					p.widget_director-header-img
+						|<@IF:[(manager_photo:isempty)]>
+						img.bvi-img(src!="[[phpthumb? &input=`assets/templates/projectsoft/images/noimage.png` &options=`w=300,h=300,zc=C,f=jpeg`]]" alt="")
+						|<@ELSE>
+						img.bvi-img(src!="[[phpthumb? &input=`[(manager_photo)]` &options=`w=300,h=300,zc=C,f=jpeg`]]" alt="")
+						|<@ENDIF>
+				.widget_director-content
+					dl
+						|[(org_address:isnotempty:then('
+						dt
+							p
+								strong
+									|Адрес:
+						dd
+							p
+								i.icon-home
+								|[(org_address)]
+						|'))][(org_phone:isnotempty:then('
+						dt
+							p
+								strong
+									|Телефон:
+						dd
+							p
+								i.icon-phone
+								|[(org_phone:nl2br)]
+						|'))][(org_email:isnotempty:then('
+						dt
+							p
+								strong
+									|Электронный адрес:
+						dd
+							p
+								i.icon-email
+								a(href="mailto:[(org_email)]" target="_blank")
+									|[(org_email)]
+						|'))]
+						dt
+							p
+								strong
+									|Сайт:
+						dd
+							p
+								i.icon-website
+								a(href="[(site_url)]" target="_blank")
+									|[(site_url)]
+							|[(org_rutube:isnotempty:then('
+							p
+								i.icon-rutube
+								a(href="[(org_rutube)]" target="_blank")
+									|Канал на RUTUBE
+							|'))][(org_vk:isnotempty:then('
+							p
+								i.icon-vk
+								a(href="[(org_vk)]" target="_blank")
+									|Группа в VK
+							|'))][(org_ok:isnotempty:then('
+							p
+								i.icon-ok
+								a(href="[(org_ok)]" target="_blank")
+									|Группа в Одноклассниках
+							|'))][(org_tg:isnotempty:then('
+							p
+								i.icon-telegram
+								a(href="[(org_tg)]" target="_blank")
+									|Группа в Telegram
+							|'))][(org_wha:isnotempty:then('
+							p
+								i.icon-whatsapp
+								a(href="[(org_wha)]" target="_blank")
+									|Группа в WhatsApp
+							|'))]
+			|[[multiTV? &fromJson=`[(site_right_widgets)]` &tvName=`site_right_widgets`]]
+// /Правая колонка

@@ -84,3 +84,4 @@ site/assets/tvs/multitv/configs/*
 !site/assets/tvs/multitv/configs/photogallery.config.inc.php
 !site/assets/tvs/multitv/configs/site_photogallery.config.inc.php
 !site/assets/tvs/multitv/configs/site_links.config.inc.php
+!site/assets/tvs/multitv/configs/*widgets.config.inc.php

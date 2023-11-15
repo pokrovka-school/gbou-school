@@ -6,4 +6,18 @@
 	padding: var(--padding-column);
 	box-shadow: 0 0 1px #333 !important;
 	margin-bottom: var(--padding-column);
+	overflow: hidden;
+	&_director {
+		&-content {
+			dl {
+				dt,
+				dd {
+					[class^="icon-"]:before,
+					[class*=" icon-"]:before {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
 }

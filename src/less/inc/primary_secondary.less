@@ -10,19 +10,25 @@ main.main {
 	padding-left: var(--padding-column);
 	padding-right: var(--padding-column);
 }
+.primary,
+.secondary{
+	position: relative;
+}
+.primary {
+	width: ~'calc(100% - 640px)';
+	overflow: hidden;
+	order: 2;
+	z-index: 5;
+}
 .secondary {
 	width: 320px;
+	z-index: 10;
 	&-right {
 		order: 3;
 	}
 	&-left {
 		order: 1;
 	}
-}
-.primary {
-	width: ~'calc(100% - 640px)';
-	overflow: hidden;
-	order: 2;
 }
 @media (max-width: 1280px) {
 	.secondary {

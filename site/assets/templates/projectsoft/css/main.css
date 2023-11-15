@@ -12,21 +12,21 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?6ff0a7881adf9e05c49260b2ba8767e8") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?6ff0a7881adf9e05c49260b2ba8767e8") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?6ff0a7881adf9e05c49260b2ba8767e8") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?6ff0a7881adf9e05c49260b2ba8767e8") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?6ff0a7881adf9e05c49260b2ba8767e8") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?6ff0a7881adf9e05c49260b2ba8767e8") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?6ff0a7881adf9e05c49260b2ba8767e8") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?6ff0a7881adf9e05c49260b2ba8767e8") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?6ff0a7881adf9e05c49260b2ba8767e8") format("truetype");
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
@@ -34,14 +34,14 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?6ff0a7881adf9e05c49260b2ba8767e8") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?6ff0a7881adf9e05c49260b2ba8767e8") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?6ff0a7881adf9e05c49260b2ba8767e8") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pokrovka";
-  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?d8d23cb079e22277dfae88e3238717a6") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?d8d23cb079e22277dfae88e3238717a6") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?d8d23cb079e22277dfae88e3238717a6") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?6ff0a7881adf9e05c49260b2ba8767e8") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?6ff0a7881adf9e05c49260b2ba8767e8") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?6ff0a7881adf9e05c49260b2ba8767e8") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -317,12 +317,20 @@
   content: "\e93f";
 }
 
-.icon-zoom-in:before {
+.icon-website:before {
   content: "\e940";
 }
 
-.icon-zoom-out:before {
+.icon-whatsapp:before {
   content: "\e941";
+}
+
+.icon-zoom-in:before {
+  content: "\e942";
+}
+
+.icon-zoom-out:before {
+  content: "\e943";
 }
 
 * {
@@ -6574,6 +6582,10 @@ h6,
   font-size: 18px;
 }
 
+.blockquote {
+  font-style: italic;
+}
+
 main.main {
   display: -ms-flexbox;
   display: flex;
@@ -6592,8 +6604,22 @@ main.main {
   padding-right: var(--padding-column);
 }
 
+.primary,
+.secondary {
+  position: relative;
+}
+
+.primary {
+  width: calc(100% - 640px);
+  overflow: hidden;
+  -ms-flex-order: 2;
+  order: 2;
+  z-index: 5;
+}
+
 .secondary {
   width: 320px;
+  z-index: 10;
 }
 
 .secondary-right {
@@ -6606,13 +6632,6 @@ main.main {
   order: 1;
 }
 
-.primary {
-  width: calc(100% - 640px);
-  overflow: hidden;
-  -ms-flex-order: 2;
-  order: 2;
-}
-
 .widgets {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -6622,6 +6641,14 @@ main.main {
   padding: var(--padding-column);
   box-shadow: 0 0 1px #333 !important;
   margin-bottom: var(--padding-column);
+  overflow: hidden;
+}
+
+.widget_director-content dl dt [class^="icon-"]:before,
+.widget_director-content dl dd [class^="icon-"]:before,
+.widget_director-content dl dt [class*=" icon-"]:before,
+.widget_director-content dl dd [class*=" icon-"]:before {
+  margin-right: 10px;
 }
 
 .sitelinks {
