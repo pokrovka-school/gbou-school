@@ -49,11 +49,11 @@ main.main {
 	.secondary {
 		&-left {
 			width: 48%;
-			order: 3;
+			order: 2;
 		}
 		&-right {
 			width: 48%;
-			order: 2;
+			order: 3;
 		}
 	}
 	.primary {
@@ -71,11 +71,22 @@ main.main {
 	.secondary {
 		&-left {
 			width: 100%;
-			order: 3;
+			order: 2;
+			.widgets {
+				padding-bottom: unset;
+				.widget {
+					&:last-child {
+						margin-bottom: unset;
+					}
+				}
+			}
 		}
 		&-right {
 			width: 100%;
-			order: 2;
+			order: 3;
+			.widgets {
+				padding-top: var(--padding-column);
+			}
 		}
 	}
 }
