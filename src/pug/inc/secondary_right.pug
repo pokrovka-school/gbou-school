@@ -13,12 +13,10 @@
 							|[(manager_position)]
 					h5.widget_director-header-name
 						|[(manager_name)]
+					|<@IF:[(manager_photo:isnotempty)]>
 					p.widget_director-header-img
-						|<@IF:[(manager_photo:isempty)]>
-						img.bvi-img(src!="[[phpthumb? &input=`assets/templates/projectsoft/images/noimage.png` &options=`w=300,h=300,zc=C,f=jpeg`]]" alt="")
-						|<@ELSE>
 						img.bvi-img(src!="[[phpthumb? &input=`[(manager_photo)]` &options=`w=300,h=300,zc=C,f=jpeg`]]" alt="")
-						|<@ENDIF>
+					|<@ENDIF>
 				.widget_director-content
 					dl
 						|[(org_address:isnotempty:then('

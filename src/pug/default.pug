@@ -15,23 +15,6 @@ html(dir="ltr" lang="ru" prefix="og: http://ogp.me/ns#")
 											|[*longtitle:ifempty=`[*pagetitle*]`*]
 									.entry-content
 										|[*content*]
-								|[[DocLister?
-								|   &parents=`2`
-								|   &display=`[(news_count_news)]`
-								|   &tvList=`imageSoc, news_date`
-								|   &tvPrefix=``
-								|   &orderBy=`news_date DESC`
-								|   &sortBy=`news_date`
-								|   &sortDir=`DESC`
-								|   &tvSortType=`TVDATETIME`
-								|   &prepare=`\ProjectSoft\PrepareDL::prepareItem`
-								|   &noneTPL=``
-								|   &ownerTPL=`@FILE:projectsoft/tpl/news_owner`
-								|   &tpl=`@FILE:projectsoft/tpl/news_tpl`
-								|   &showParent=`0`
-								|   &urlScheme=`full`
-								|   &noneWrapOuter=`0`
-								|]]
 					include inc/secondary.pug
 				include inc/sitelinks.pug
 			include inc/footer.pug

@@ -1,6 +1,6 @@
 :root {
   --background-color: #ffffff;
-  --link-color: #ff0000;
+  --link-color: #cf0000;
   --link-hover-color: #ff0000;
   --color: #333;
   --padding-column: 15px;
@@ -12,21 +12,21 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?5774495559051e36f64ea3cc9b8bda3a") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?5774495559051e36f64ea3cc9b8bda3a") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?5774495559051e36f64ea3cc9b8bda3a") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?5774495559051e36f64ea3cc9b8bda3a") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?5774495559051e36f64ea3cc9b8bda3a") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?5774495559051e36f64ea3cc9b8bda3a") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?5774495559051e36f64ea3cc9b8bda3a") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?5774495559051e36f64ea3cc9b8bda3a") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?5774495559051e36f64ea3cc9b8bda3a") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
@@ -34,14 +34,14 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?5774495559051e36f64ea3cc9b8bda3a") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?5774495559051e36f64ea3cc9b8bda3a") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?5774495559051e36f64ea3cc9b8bda3a") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pokrovka";
-  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?5774495559051e36f64ea3cc9b8bda3a") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?5774495559051e36f64ea3cc9b8bda3a") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?5774495559051e36f64ea3cc9b8bda3a") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -2370,6 +2370,16 @@ input[type="button"].btn-block {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
 img,

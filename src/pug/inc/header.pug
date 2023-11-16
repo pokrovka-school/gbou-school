@@ -10,11 +10,25 @@ header.container.main-header(role="banner")
 			form#search-form(action="/search/" method="GET" role="form")
 				input.bvi-no-styles(type="text" name="text" value="[!$_GET['text']!]" placeholder="Поиск" required="required" role="textbox")
 	include eya.pug
+	|<@IF:[(site_photogallery_show:is(0))]>
+	|<@IF:[*id:is(1)*]>
 	// Карусель
-	|[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery`]]
+	|[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery` &display=`all`]]
+	|<@ENDIF>
+	|<@ELSE>
+	// Карусель
+	|[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery` &display=`all`]]
+	|<@ENDIF>
 	// Меню 2
 	|{{@FILE assets/templates/projectsoft/tpl/menu.html}}
-	// Госуслуги только на главной
+	|<@IF:[(site_gosuslugi_show:is(0))]>
 	|<@IF:[*id:is(1)*]>
+	// Госуслуги
 	|{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
 	|<@ENDIF>
+	|<@ELSE>
+	// Госуслуги
+	|{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+	|<@ENDIF>
+	// Хлебные крошки
+	include breadcrumbs.pug

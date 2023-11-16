@@ -1,14 +1,269 @@
-<!DOCTYPE html><html dir="ltr" lang="ru" prefix="og: http://ogp.me/ns#"><head><base href="[(site_url)]"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="content-language" content="ru"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="cmsmagazine" content="d8e7426ec72ad3e4ea38b09ebf01284"><meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"><meta name="yandex-verification" content="[(yandex_verification)]"><title>[*titl*]</title>[*noIndex*]<!-- Favicons--><!-- include ../../../site/html_code.html--><link rel="apple-touch-icon" sizes="57x57" href="[(site_url)]apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="[(site_url)]apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="[(site_url)]apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="[(site_url)]apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="[(site_url)]apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="[(site_url)]apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="[(site_url)]apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="[(site_url)]apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="[(site_url)]apple-touch-icon-180x180.png"><link rel="icon" type="image/png" sizes="32x32" href="[(site_url)]favicon-32x32.png"><link rel="icon" type="image/png" sizes="194x194" href="[(site_url)]favicon-194x194.png"><link rel="icon" type="image/png" sizes="192x192" href="[(site_url)]android-chrome-192x192.png"><link rel="icon" type="image/png" sizes="16x16" href="[(site_url)]favicon-16x16.png"><link rel="manifest" href="[(site_url)]site.webmanifest"><link rel="mask-icon" href="[(site_url)]safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="[(site_url)]favicon.ico"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="[(site_url)]mstile-144x144.png"><meta name="msapplication-config" content="[(site_url)]browserconfig.xml"><meta name="theme-color" content="#ffffff"><!-- Meta--><meta name="apple-mobile-web-app-title" content="[(site_name:notags:strip)]"><meta name="application-name" content="[(site_name:notags:strip)]"><meta name="title" content="[*pagetitle:notags:strip*]"><meta name="description" content="[*desc:notags:strip*]"><meta name="keywords" content="[*keyw:notags:strip*]"><meta name="author" content="[(site_name)]"><!-- RSS--><link rel="alternate" type="application/rss+xml" title="RSS-лента [(site_name)]" href="[(site_url)]rss.xml"><@IF:[*id:is(2)*]><!-- Canonical--><link rel="canonical" href="[(site_url)][~[*id*]~]"><@ENDIF><!-- Open Graph--><meta name="og:url" content="[(site_url)][~[*id*]~]"><meta property="og:type" content="website"><meta name="og:title" content="[*pagetitle:notags:strip*]"><meta name="og:description" content="[*desc:notags:strip*]">[[ogImage]]<link type="text/css" rel="stylesheet" href="[(site_url)]assets/templates/projectsoft/css/main.min.css?5ab6bbba17423ae12ad8034599507ac8"><link type="text/css" rel="stylesheet" href="[(site_url)]css.css?5ab6bbba17423ae12ad8034599507ac8"></head><body><div class="pagewrapper"><div class="body bvi-no-styles"><header class="container main-header" role="banner"><!-- Название--><div class="header-group" role="generic"><p class="site-title">[(site_name)]</p><p class="site-description">[(site_description)]</p><!-- Поиск--><div id="search" role="search"><form id="search-form" action="/search/" method="GET" role="form"><input class="bvi-no-styles" type="text" name="text" value="[!$_GET['text']!]" placeholder="Поиск" required="required" role="textbox"></form></div></div><div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div><!-- Карусель-->[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery`]]<!-- Меню 2-->{{@FILE assets/templates/projectsoft/tpl/menu.html}}<!-- Госуслуги только на главной--><@IF:[*id:is(1)*]>
-{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
-<@ENDIF></header><main class="main"><div class="primary" role="main"><div class="container"><div class="row" id="content"><article class="container page page-[*id*] type-page clearfix" id="page-[*id*]" role="article"><header class="entry-header" role="generic"><h1 class="entry-title">[*longtitle:ifempty=`[*pagetitle*]`*]</h1></header><div class="entry-content">[*content*][[PageBuilder]]</div></article></div></div></div><!-- Правая и левая колонки (Виджеты)--><!-- Правая колонка--><div class="secondary secondary-right" role="complementary"><div class="container"><div class="widgets row"><div class="widget eya-panel bvi-no-styles"><a class="bvi-no-styles button-eye" href="javascript:;"><i class="bvi-no-styles icon-eye-new"></i>Версия для слабовидящих</a></div><div class="widget bvi-no-styles widget_director"><div class="widget_director-header"><h4 class="widget_director-title"><strong>[(manager_position)]</strong></h4><h5 class="widget_director-header-name">[(manager_name)]</h5><p class="widget_director-header-img"><@IF:[(manager_photo:isempty)]><img class="bvi-img" src="[[phpthumb? &input=`assets/templates/projectsoft/images/noimage.png` &options=`w=300,h=300,zc=C,f=jpeg`]]" alt=""><@ELSE><img class="bvi-img" src="[[phpthumb? &input=`[(manager_photo)]` &options=`w=300,h=300,zc=C,f=jpeg`]]" alt=""><@ENDIF></p></div><div class="widget_director-content"><dl>[(org_address:isnotempty:then('<dt><p><strong>Адрес:</strong></p></dt><dd><p><i class="icon-home"></i>[(org_address)]</p></dd>'))][(org_phone:isnotempty:then('<dt><p><strong>Телефон:</strong></p></dt><dd><p><i class="icon-phone"></i>[(org_phone:nl2br)]</p></dd>'))][(org_email:isnotempty:then('<dt><p><strong>Электронный адрес:</strong></p></dt><dd><p><i class="icon-email"></i><a href="mailto:[(org_email)]" target="_blank">[(org_email)]</a></p></dd>'))]<dt><p><strong>Сайт:</strong></p></dt><dd><p><i class="icon-website"></i><a href="[(site_url)]" target="_blank">[(site_url)]</a></p>[(org_rutube:isnotempty:then('<p><i class="icon-rutube"></i><a href="[(org_rutube)]" target="_blank">Канал на RUTUBE</a></p>'))][(org_vk:isnotempty:then('<p><i class="icon-vk"></i><a href="[(org_vk)]" target="_blank">Группа в VK</a></p>'))][(org_ok:isnotempty:then('<p><i class="icon-ok"></i><a href="[(org_ok)]" target="_blank">Группа в Одноклассниках</a></p>'))][(org_tg:isnotempty:then('<p><i class="icon-telegram"></i><a href="[(org_tg)]" target="_blank">Группа в Telegram</a></p>'))][(org_wha:isnotempty:then('<p><i class="icon-whatsapp"></i><a href="[(org_wha)]" target="_blank">Группа в WhatsApp</a></p>'))]</dd></dl></div></div>[[multiTV? &fromJson=`[(site_right_widgets)]` &tvName=`site_right_widgets`]]</div></div></div><!-- /Правая колонка--><!-- Левая колонка--><div class="secondary secondary-left" role="complementary"><div class="container"><div class="widgets row">[[multiTV? &fromJson=`[(site_left_widgets)]` &tvName=`site_left_widgets`]]</div></div></div><!-- /Левая колонка--></main><div class="sitelinks container-full">[[multiTV? &fromJson=`[(site_links)]` &tvName=`site_links` &display=`all`]]</div></div><footer class="footer bvi-no-styles"><div class="footer-wrapper container bvi-no-styles"><div class="footer-row bvi-no-styles"><div class="footer-col-left bvi-no-styles"><p class="bvi-no-styles">Авторские права © [!$_SERVER['REQUEST_TIME']:dateFormat='Y'!]
-&nbsp;<a class="bvi-no-styles" href="[(site_url)]">[(site_name)]</a></p></div><div class="footer-col-center bvi-no-styles"><p class="bvi-no-styles"><a class="bvi-no-styles icon-rss" href="[(site_url)]rss.xml" target="_blank"></a></p></div><div class="footer-col-right developed bvi-no-styles"><p class="developed-by bvi-no-styles">Developed by:
-&nbsp;<a class="developed-by bvi-no-styles" href="https://github.com/ProjectSoft-STUDIONIONS" target="_blank">ProjectSoft © 2000 - [!$_SERVER['REQUEST_TIME']:dateFormat='Y'!]</a></p></div></div></div></footer><div class="fancybox__wrapper"><!-- FancyBox plugins--></div></div><script src="[(site_url)]assets/templates/projectsoft/js/app.min.js?5ab6bbba17423ae12ad8034599507ac8"></script><script src="[(site_url)]assets/templates/projectsoft/js/main.min.js?5ab6bbba17423ae12ad8034599507ac8"></script><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-	m[i].l=1*new Date();
-	for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-	k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-	ym([(yandex_counter)], "init", {
-		clickmap:true,
-		trackLinks:true,
-		accurateTrackBounce:true
-});</script><noscript><div><img src="https://mc.yandex.ru/watch/[(yandex_counter)]" style="position:absolute; left:-9999px;" alt=""></div></noscript><!-- /Yandex.Metrika counter --><!-- Forms--><!-- /Forms--></body></html>
+<!DOCTYPE html>
+<html dir="ltr" lang="ru" prefix="og: http://ogp.me/ns#">
+	<head>
+		<base href="[(site_url)]">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="content-language" content="ru">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="cmsmagazine" content="d8e7426ec72ad3e4ea38b09ebf01284">
+		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+		<meta name="yandex-verification" content="[(yandex_verification)]">
+		<title>[*titl*]</title>[*noIndex*]
+		<!-- Favicons-->
+		<!-- include ../../../site/html_code.html-->
+		<link rel="apple-touch-icon" sizes="57x57" href="[(site_url)]apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="[(site_url)]apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="[(site_url)]apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="[(site_url)]apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="[(site_url)]apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="[(site_url)]apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="[(site_url)]apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="[(site_url)]apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="[(site_url)]apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="[(site_url)]favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="194x194" href="[(site_url)]favicon-194x194.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="[(site_url)]android-chrome-192x192.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="[(site_url)]favicon-16x16.png">
+		<link rel="manifest" href="[(site_url)]site.webmanifest">
+		<link rel="mask-icon" href="[(site_url)]safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="[(site_url)]favicon.ico">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="[(site_url)]mstile-144x144.png">
+		<meta name="msapplication-config" content="[(site_url)]browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<!-- Meta-->
+		<meta name="apple-mobile-web-app-title" content="[(site_name:notags:strip)]">
+		<meta name="application-name" content="[(site_name:notags:strip)]">
+		<meta name="title" content="[*pagetitle:notags:strip*]">
+		<meta name="description" content="[*desc:notags:strip*]">
+		<meta name="keywords" content="[*keyw:notags:strip*]">
+		<meta name="author" content="[(site_name)]">
+		<!-- RSS-->
+		<link rel="alternate" type="application/rss+xml" title="RSS-лента [(site_name)]" href="[(site_url)]rss.xml"><@IF:[*id:is(2)*]>
+		<!-- Canonical-->
+		<link rel="canonical" href="[(site_url)][~[*id*]~]"><@ENDIF>
+		<!-- Open Graph-->
+		<meta name="og:url" content="[(site_url)][~[*id*]~]">
+		<meta property="og:type" content="website">
+		<meta name="og:title" content="[*pagetitle:notags:strip*]">
+		<meta name="og:description" content="[*desc:notags:strip*]">[[ogImage]]
+		<link type="text/css" rel="stylesheet" href="[(site_url)]assets/templates/projectsoft/css/main.min.css?fe65c04d4f074560ea651082aa268760">
+		<link type="text/css" rel="stylesheet" href="[(site_url)]css.css?fe65c04d4f074560ea651082aa268760">
+	</head>
+	<body>
+		<div class="pagewrapper">
+			<div class="body bvi-no-styles">
+				<header class="container main-header" role="banner">
+					<!-- Название-->
+					<div class="header-group" role="generic">
+						<p class="site-title">[(site_name)]</p>
+						<p class="site-description">[(site_description)]</p>
+						<!-- Поиск-->
+						<div id="search" role="search">
+							<form id="search-form" action="/search/" method="GET" role="form">
+								<input class="bvi-no-styles" type="text" name="text" value="[!$_GET['text']!]" placeholder="Поиск" required="required" role="textbox">
+							</form>
+						</div>
+					</div>
+					<div class="eya-panel"><a href="javascript:;" title="Версия для слабовидящих"><i class="icon-eye-new"></i>Версия для слабовидящих</a></div><@IF:[(site_photogallery_show:is(0))]>
+					<@IF:[*id:is(1)*]>
+					<!-- Карусель-->[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery` &display=`all`]]
+					<@ENDIF>
+					<@ELSE>
+					<!-- Карусель-->[[multiTV? &fromJson=`[(site_photogallery)]` &tvName=`site_photogallery` &display=`all`]]
+					<@ENDIF>
+					<!-- Меню 2-->{{@FILE assets/templates/projectsoft/tpl/menu.html}}
+					<@IF:[(site_gosuslugi_show:is(0))]>
+					<@IF:[*id:is(1)*]>
+					<!-- Госуслуги-->{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+					<@ENDIF>
+					<@ELSE>
+					<!-- Госуслуги-->{{@FILE assets/templates/projectsoft/tpl/gosuslugi.html}}
+					<@ENDIF>
+					<!-- Хлебные крошки-->
+					<@IF:[*id:neq(1)*]>[!DLCrumbs
+						&showCurrent=`1`
+						&ownerTPL=`@CODE:<nav class="bvi-no-styles"><ul class="breadcrumb bvi-no-styles" aria-label="Breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">[+crumbs.wrap+]</ul></nav>`
+						&tpl=`@CODE:<li class="bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><a class="bvi-no-styles" href="[+url+]" title="[+e.title+]" itemprop="item"><span class="bvi-no-styles" itemprop="name">[+title+]</span></a></li>`
+						&tplFirst=`@CODE:<li class="home-link bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><a href="[+url+]" title="[+longtitle+]" itemprop="item" class="bvi-no-styles">[+title+]</a></li>`
+						&tplCurrent=`@CODE:<li class="active bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><span class="bvi-no-styles" itemprop="item">[+title+]</span></li>`
+					!]<@ENDIF>
+				</header>
+				<main class="main">
+					<div class="primary" role="main">
+						<div class="container">
+							<div class="row" id="content">
+								<article class="container page page-[*id*] type-page clearfix" id="page-[*id*]" role="article">
+									<header class="entry-header" role="generic">
+										<h1 class="entry-title">[*longtitle:ifempty=`[*pagetitle*]`*]</h1>
+									</header>
+									<div class="entry-content">
+										[*content*][[PageBuilder]]
+										[[DocLister?
+										  &parents=`2`
+										  &display=`[(news_count_news)]`
+										  &tvList=`imageSoc, news_date`
+										  &tvPrefix=``
+										  &orderBy=`news_date DESC`
+										  &sortBy=`news_date`
+										  &sortDir=`DESC`
+										  &tvSortType=`TVDATETIME`
+										  &prepare=`\ProjectSoft\PrepareDL::prepareItem`
+										  &noneTPL=``
+										  &ownerTPL=`@FILE:projectsoft/tpl/news_owner_home`
+										  &tpl=`@FILE:projectsoft/tpl/news_tpl`
+										  &showParent=`0`
+										  &urlScheme=`full`
+										  &noneWrapOuter=`0`
+										]]
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<!-- Правая и левая колонки (Виджеты)-->
+					<!-- Правая колонка-->
+					<div class="secondary secondary-right" role="complementary">
+						<div class="container">
+							<div class="widgets row">
+								<div class="widget eya-panel bvi-no-styles"><a class="bvi-no-styles button-eye" href="javascript:;"><i class="bvi-no-styles icon-eye-new"></i>Версия для слабовидящих</a></div>
+								<div class="widget bvi-no-styles widget_director">
+									<div class="widget_director-header">
+										<h4 class="widget_director-title"><strong>[(manager_position)]</strong></h4>
+										<h5 class="widget_director-header-name">[(manager_name)]</h5><@IF:[(manager_photo:isnotempty)]>
+										<p class="widget_director-header-img"><img class="bvi-img" src="[[phpthumb? &input=`[(manager_photo)]` &options=`w=300,h=300,zc=C,f=jpeg`]]" alt=""></p><@ENDIF>
+									</div>
+									<div class="widget_director-content">
+										<dl>[(org_address:isnotempty:then('
+											<dt>
+												<p><strong>Адрес:</strong></p>
+											</dt>
+											<dd>
+												<p><i class="icon-home"></i>[(org_address)]</p>
+											</dd>'))][(org_phone:isnotempty:then('
+											<dt>
+												<p><strong>Телефон:</strong></p>
+											</dt>
+											<dd>
+												<p><i class="icon-phone"></i>[(org_phone:nl2br)]</p>
+											</dd>'))][(org_email:isnotempty:then('
+											<dt>
+												<p><strong>Электронный адрес:</strong></p>
+											</dt>
+											<dd>
+												<p><i class="icon-email"></i><a href="mailto:[(org_email)]" target="_blank">[(org_email)]</a></p>
+											</dd>'))]
+											<dt>
+												<p><strong>Сайт:</strong></p>
+											</dt>
+											<dd>
+												<p><i class="icon-website"></i><a href="[(site_url)]" target="_blank">[(site_url)]</a></p>[(org_rutube:isnotempty:then('
+												<p><i class="icon-rutube"></i><a href="[(org_rutube)]" target="_blank">Канал на RUTUBE</a></p>'))][(org_vk:isnotempty:then('
+												<p><i class="icon-vk"></i><a href="[(org_vk)]" target="_blank">Группа в VK</a></p>'))][(org_ok:isnotempty:then('
+												<p><i class="icon-ok"></i><a href="[(org_ok)]" target="_blank">Группа в Одноклассниках</a></p>'))][(org_tg:isnotempty:then('
+												<p><i class="icon-telegram"></i><a href="[(org_tg)]" target="_blank">Группа в Telegram</a></p>'))][(org_wha:isnotempty:then('
+												<p><i class="icon-whatsapp"></i><a href="[(org_wha)]" target="_blank">Группа в WhatsApp</a></p>'))]
+											</dd>
+										</dl>
+									</div>
+								</div>[[multiTV? &fromJson=`[(site_right_widgets)]` &tvName=`site_right_widgets`]]
+							</div>
+						</div>
+					</div>
+					<!-- /Правая колонка-->
+					<!-- Левая колонка-->
+					<div class="secondary secondary-left" role="complementary">
+						<div class="container">
+							<div class="widgets row">
+								<div class="widget bvi-no-styles education-menu">
+									<article class="widget-article">
+										<header class="widget-article-header">
+											<h5 class="widget-article-title">Сведения об образовательной организации</h5>
+										</header>
+										<div class="widget-article-content">
+											[!DLMenu?
+												&outerTpl=`@CODE: <div><nav role="navigation" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><ul class="[+classNames+] bvi-no-styles" itemprop="about" itemscope itemtype="http://schema.org/ItemList">[+wrap+]</ul></nav></div>`
+												&rowTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+												&rowHereTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+												&parentRowTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]">[+wrap+]</li>`
+												&parentRowHereTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]">[+wrap+]</li>`
+												&parentRowActiveTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]">[+wrap+]</li>`
+												&innerTpl=`@CODE: <ul class="[+classNames+]">[+wrap+]</ul>`
+												&innerRowTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+												&innerRowHereTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+												&parents=`10`
+												&hideSubMenus=`1`
+												&innerClass=`inner`
+												&outerClass=`outer`
+												&rowClass=``
+												&firstClass=``
+												&lastClass=``
+												&levelClass=``
+												&webLinkClass=`web-link`
+												&parentClass=`parent`
+												&hereClass=`here`
+												&activeClass=`active`
+												&oddClass=``
+												&evenClass=``
+												&stateClass=`stateClass`
+												&urlScheme=`full`
+											!]
+										</div>
+									</article>
+								</div>[[multiTV? &fromJson=`[(site_left_widgets)]` &tvName=`site_left_widgets`]]
+							</div>
+						</div>
+					</div>
+					<!-- /Левая колонка-->
+				</main>
+				<div class="sitelinks container-full">[[multiTV? &fromJson=`[(site_links)]` &tvName=`site_links` &display=`all`]]</div>
+			</div>
+			<footer class="footer bvi-no-styles">
+				<div class="footer-wrapper container bvi-no-styles">
+					<div class="footer-row bvi-no-styles">
+						<div class="footer-col-left bvi-no-styles">
+							<p class="bvi-no-styles">
+								Авторские права © [!$_SERVER['REQUEST_TIME']:dateFormat='Y'!]
+								&nbsp;<a class="bvi-no-styles" href="[(site_url)]">[(site_name)]</a>
+							</p>
+						</div>
+						<div class="footer-col-center bvi-no-styles">
+							<p class="bvi-no-styles"><a class="bvi-no-styles icon-rss" href="[(site_url)]rss.xml" target="_blank"></a></p>
+						</div>
+						<div class="footer-col-right developed bvi-no-styles">
+							<p class="developed-by bvi-no-styles">
+								Developed by:
+								&nbsp;<a class="developed-by bvi-no-styles" href="https://github.com/ProjectSoft-STUDIONIONS" target="_blank">ProjectSoft © 2000 - [!$_SERVER['REQUEST_TIME']:dateFormat='Y'!]</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="fancybox__wrapper">
+				<!-- FancyBox plugins-->
+			</div>
+		</div>
+		<script src="[(site_url)]assets/templates/projectsoft/js/app.min.js?fe65c04d4f074560ea651082aa268760"></script>
+		<script src="[(site_url)]assets/templates/projectsoft/js/main.min.js?fe65c04d4f074560ea651082aa268760"></script>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+				m[i].l=1*new Date();
+				for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+				k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+				(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+				ym([(yandex_counter)], "init", {
+					clickmap:true,
+					trackLinks:true,
+					accurateTrackBounce:true
+			});
+		</script>
+		<noscript>
+			<div><img src="https://mc.yandex.ru/watch/[(yandex_counter)]" style="position:absolute; left:-9999px;" alt=""></div>
+		</noscript>
+		<!-- /Yandex.Metrika counter -->
+		<!-- Forms-->
+		<!-- /Forms-->
+	</body>
+</html>

@@ -1,3 +1,4 @@
+
 [!DLMenu?
 	&outerTpl=`@CODE: <div class="header-navigation bvi-no-styles"><nav class="bvi-no-styles" role="navigation" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><button type="button" class="bvi-no-styles"><i class="icon-menu-open bvi-no-styles"></i></button><ul class="[+classNames+] bvi-no-styles" itemprop="about" itemscope itemtype="http://schema.org/ItemList">[+wrap+]</ul></nav></div>`
 	&rowTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
@@ -9,7 +10,7 @@
 	&innerRowTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
 	&innerRowHereTpl=`@CODE:<li class="[+classNames+] bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a class="bvi-no-styles" itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
 	&parents=`0`
-	&&addWhereList=`hidemenu = 0 AND parent NOT IN(2, 98, 57)`
+	&addWhereList=`hidemenu = 0 AND parent NOT IN(2, 98, 57)`
 	&showParent=`1`
 	&innerClass=`inner`
 	&outerClass=`outer`
@@ -24,11 +25,5 @@
 	&oddClass=``
 	&evenClass=``
 	&stateClass=`stateClass`
-	&&urlScheme=`full`
-!]<@IF:[*id:neq(1)*]>[!DLCrumbs
-	&showCurrent=`1`
-	&ownerTPL=`@CODE:<nav class="bvi-no-styles"><ul class="breadcrumb bvi-no-styles" aria-label="Breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">[+crumbs.wrap+]</ul></nav>`
-	&tpl=`@CODE:<li class="bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><a class="bvi-no-styles" href="[+url+]" title="[+e.title+]" itemprop="item"><span class="bvi-no-styles" itemprop="name">[+title+]</span></a></li>`
-	&tplFirst=`@CODE:<li class="home-link bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><a href="[+url+]" title="[+longtitle+]" itemprop="item" class="bvi-no-styles">[+title+]</a></li>`
-	&tplCurrent=`@CODE:<li class="active bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><span class="bvi-no-styles" itemprop="item">[+title+]</span></li>`
-!]<@ENDIF>
+	&urlScheme=`full`
+!]

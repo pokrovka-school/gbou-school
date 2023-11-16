@@ -2,5 +2,38 @@
 .secondary.secondary-left(role="complementary")
 	.container
 		.widgets.row
+			.widget.bvi-no-styles.education-menu
+				article.widget-article
+					header.widget-article-header
+						h5.widget-article-title
+							|Сведения об образовательной организации
+					.widget-article-content
+						|[!DLMenu?
+						|	&outerTpl=`@CODE: <div><nav role="navigation" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><ul class="[+classNames+] bvi-no-styles" itemprop="about" itemscope itemtype="http://schema.org/ItemList">[+wrap+]</ul></nav></div>`
+						|	&rowTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+						|	&rowHereTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+						|	&parentRowTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]">[+wrap+]</li>`
+						|	&parentRowHereTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]">[+wrap+]</li>`
+						|	&parentRowActiveTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]">[+wrap+]</li>`
+						|	&innerTpl=`@CODE: <ul class="[+classNames+]">[+wrap+]</ul>`
+						|	&innerRowTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+						|	&innerRowHereTpl=`@CODE:<li class="[+classNames+]" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a itemprop="url" href="[+url+]">[+title+]</a><meta itemprop="name" content="[+title:notags:strip+]"></li>`
+						|	&parents=`10`
+						|	&hideSubMenus=`1`
+						|	&innerClass=`inner`
+						|	&outerClass=`outer`
+						|	&rowClass=``
+						|	&firstClass=``
+						|	&lastClass=``
+						|	&levelClass=``
+						|	&webLinkClass=`web-link`
+						|	&parentClass=`parent`
+						|	&hereClass=`here`
+						|	&activeClass=`active`
+						|	&oddClass=``
+						|	&evenClass=``
+						|	&stateClass=`stateClass`
+						|	&urlScheme=`full`
+						|!]
 			|[[multiTV? &fromJson=`[(site_left_widgets)]` &tvName=`site_left_widgets`]]
 // /Левая колонка
