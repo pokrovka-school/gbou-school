@@ -1,0 +1,10 @@
+AddDefaultCharset UTF-8
+
+Options All -Indexes
+
+DirectoryIndex index.html
+
+<Files ~ "^index\.(html|htm)">
+	Order Deny,Allow
+	Allow from all
+</Files>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Директория: <!--#include virtual="/icons-full/header.php" --></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<base href="<!--#include virtual="/icons-full/header.php" -->">
+		<link rel="stylesheet" type="text/css" href="/icons-full/style.css?v=1.0.3">
+		<link rel="stylesheet" type="text/css" href="/viewer/app.css?v=1.0.6">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<style type="text/css">
+			p {
+				margin-top: 0;
+				margin-bottom: 5px;
+			}
+			table {
+				margin-top: 20px;
+			}
+			td.indexcolname a {
+				display: initial;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="main">
+				<h1 class="text-center">Директория: <!--#include virtual="/icons-full/header.php" --></h1>
+				<h2 class="text-center">Питание обучающихся ГБОУ ООШ с. Покровка</h2>
+				<h3 class="text-center">Меню горячего питания</h3>
+				<p>На основании письма № ГД-1158/01 от 17.05.2021 г. Министерства просвещения Российской Федерации, в целях организации автоматического мониторинга и анализа ежедневного меню горячего питания обучающихся по образовательным программам начального общего образования в государственных и муниципальных образовательных организациях, необходимо начиная с 19 мая 2021 г. ежедневно размещать в соответствующем разделе на сайте общеобразовательной организации меню в виде электронной таблицы в формате XLSX.</p>
+				<p>Раздел "Меню горячего питания" создан в целях совершенствования системы питания школьников и повышения уровня осведомленности родителей относительно организации школьного питания. Данный раздел позволяет упорядочить и автоматизировать работу с содержанием меню, проводить мониторинг фактического меню касательно его сбалансированности и соответствия установленным нормам здорового питания.</p>

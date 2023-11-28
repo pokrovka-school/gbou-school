@@ -12,21 +12,21 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-italic.woff?12baa6279eabd70e593fbd5948d413f3") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-italic.woff2?12baa6279eabd70e593fbd5948d413f3") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-italic.ttf?12baa6279eabd70e593fbd5948d413f3") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff?12baa6279eabd70e593fbd5948d413f3") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.woff2?12baa6279eabd70e593fbd5948d413f3") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bolditalic.ttf?12baa6279eabd70e593fbd5948d413f3") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-regular.woff?12baa6279eabd70e593fbd5948d413f3") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-regular.woff2?12baa6279eabd70e593fbd5948d413f3") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-regular.ttf?12baa6279eabd70e593fbd5948d413f3") format("truetype");
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
@@ -34,14 +34,14 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/ptsans-bold.woff?12baa6279eabd70e593fbd5948d413f3") format("woff"), url("/assets/templates/projectsoft/fonts/ptsans-bold.woff2?12baa6279eabd70e593fbd5948d413f3") format("woff2"), url("/assets/templates/projectsoft/fonts/ptsans-bold.ttf?12baa6279eabd70e593fbd5948d413f3") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pokrovka";
-  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?fa4178e020d7620f0346ccd50d18530b") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?fa4178e020d7620f0346ccd50d18530b") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?fa4178e020d7620f0346ccd50d18530b") format("truetype");
+  src: url("/assets/templates/projectsoft/fonts/pokrovka.woff?12baa6279eabd70e593fbd5948d413f3") format("woff"), url("/assets/templates/projectsoft/fonts/pokrovka.woff2?12baa6279eabd70e593fbd5948d413f3") format("woff2"), url("/assets/templates/projectsoft/fonts/pokrovka.ttf?12baa6279eabd70e593fbd5948d413f3") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -389,12 +389,39 @@
   clear: both;
 }
 
+dl {
+  margin-top: unset;
+}
+
 dl > dt {
   font-weight: 700;
 }
 
 dl > dd {
   padding-left: 15px;
+}
+
+dl.dl-horizontal {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+dl.dl-horizontal dt {
+  text-align: right;
+  width: 170px;
+  font-weight: 600;
+  white-space: normal;
+}
+
+dl.dl-horizontal dd {
+  width: calc(100% - 170px);
+  padding-left: 15px;
+  margin-left: unset;
+  margin-right: unset;
 }
 html {
   font-family: sans-serif;
@@ -2390,6 +2417,14 @@ object {
   max-width: 100%;
 }
 
+ul li {
+  margin-bottom: 5px;
+}
+
+ul li > ul {
+  margin-top: 5px;
+}
+
 .pagewrapper {
   display: -ms-flexbox;
   display: flex;
@@ -2462,6 +2497,34 @@ blockquote,
 .blockquote {
   font-style: italic;
   font-size: initial;
+}
+
+.mce-visualblocks .noedit {
+  border-color: red;
+  position: relative;
+}
+
+.mce-visualblocks .noedit:before {
+  display: block;
+  top: 0px;
+  left: 30px;
+  color: red !important;
+  content: "НЕ РЕДАКТИРОВАТЬ!";
+  position: absolute;
+}
+
+@media (max-width: 767px) {
+  dl.dl-horizontal dl.dl-horizontal dt,
+  dl.dl-horizontal p.dl-horizontal dt {
+    text-align: left;
+    width: unset;
+  }
+
+  dl.dl-horizontal dd {
+    padding-left: unset;
+    width: unset;
+    margin-left: 40px;
+  }
 }
 
 @media (min-width: 768px) {

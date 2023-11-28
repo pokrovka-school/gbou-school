@@ -1,8 +1,37 @@
 dl {
+	margin-top: unset;
 	> dt {
 		font-weight: 700;
 	}
 	> dd {
 		padding-left: 15px;
+	}
+	&.dl-horizontal {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		dt {
+			text-align: right;
+			width: 170px;
+			font-weight: 600;
+			white-space: normal;
+		}
+		dd {
+			width: calc(100% - 170px);
+			padding-left: 15px;
+			margin-left: unset;
+			margin-right: unset;
+		}
+		@media (max-width: 767px) {
+			dl.dl-horizontal dt, p.dl-horizontal dt {
+				text-align: left;
+				width: unset;
+			}
+			dd {
+				padding-left: unset;
+				width: unset;
+				margin-left: 40px;
+			}
+		}
 	}
 }

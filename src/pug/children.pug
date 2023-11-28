@@ -1,0 +1,24 @@
+doctype html
+html(dir="ltr" lang="ru" prefix="og: http://ogp.me/ns#")
+	include inc/head.pug
+	body
+		.pagewrapper
+			.body.bvi-no-styles
+				include inc/header.pug
+				main.main
+					.primary(role="main")
+						.container
+							#content.row
+								article.container(id!="page-[*id*]" class!="page page-[*id*] type-page clearfix" role="article")
+									header.entry-header(role="generic")
+										h1.entry-title
+											|[*longtitle:ifempty=`[*pagetitle*]`*]
+									.entry-content
+										|[*content*][[PageBuilder]]
+										|[!DLMenu?
+										|	&parents=`[*id*]`
+										|!]
+					include inc/secondary.pug
+				include inc/sitelinks.pug
+			include inc/footer.pug
+		include inc/scripts.pug
