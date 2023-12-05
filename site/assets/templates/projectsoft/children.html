@@ -48,13 +48,13 @@
 		<meta property="og:type" content="website">
 		<meta name="og:title" content="[*pagetitle:notags:strip*]">
 		<meta name="og:description" content="[*desc:notags:strip*]">[[ogImage]]
-		<link type="text/css" rel="stylesheet" href="[(site_url)]assets/templates/projectsoft/css/main.min.css?3ed35f82266cbfa365b5bcc2fb860450">
-		<link type="text/css" rel="stylesheet" href="[(site_url)]css.css?3ed35f82266cbfa365b5bcc2fb860450">
+		<link type="text/css" rel="stylesheet" href="[(site_url)]assets/templates/projectsoft/css/main.min.css?cd4c8c9bd9f21d837c24d232b1f3cbf3">
+		<link type="text/css" rel="stylesheet" href="[(site_url)]css.css?cd4c8c9bd9f21d837c24d232b1f3cbf3">
 	</head>
 	<body>
 		<div class="pagewrapper">
 			<div class="body bvi-no-styles">
-				<header class="container main-header" role="banner">
+				<header class="main-header" role="banner">
 					<!-- Название-->
 					<div class="header-group" role="generic">
 						<p class="site-title">[(site_name)]</p>
@@ -84,16 +84,16 @@
 					<!-- Хлебные крошки-->
 					<@IF:[*id:neq(1)*]>[!DLCrumbs
 						&showCurrent=`1`
-						&ownerTPL=`@CODE:<nav class="bvi-no-styles"><ul class="breadcrumb bvi-no-styles" aria-label="Breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">[+crumbs.wrap+]</ul></nav>`
-						&tpl=`@CODE:<li class="bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><a class="bvi-no-styles" href="[+url+]" title="[+e.title+]" itemprop="item"><span class="bvi-no-styles" itemprop="name">[+title+]</span></a></li>`
-						&tplFirst=`@CODE:<li class="home-link bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><a href="[+url+]" title="[+longtitle+]" itemprop="item" class="bvi-no-styles">[+title+]</a></li>`
-						&tplCurrent=`@CODE:<li class="active bvi-no-styles" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><span class="bvi-no-styles" itemprop="item">[+title+]</span></li>`
+						&ownerTPL=`@CODE:<nav class=""><ul class="breadcrumb " aria-label="Breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">[+crumbs.wrap+]</ul></nav>`
+						&tpl=`@CODE:<li class="" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><a class="" href="[+url+]" title="[+e.title+]" itemprop="item"><span class="" itemprop="name">[+title+]</span></a></li>`
+						&tplFirst=`@CODE:<li class="home-link " itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><a href="[+url+]" title="[+longtitle+]" itemprop="item" class="bvi-no-styles">[+title+]</a></li>`
+						&tplCurrent=`@CODE:<li class="active " itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><span class="" itemprop="item">[+title+]</span></li>`
 					!]<@ENDIF>
 				</header>
 				<main class="main">
 					<div class="primary" role="main">
 						<div class="container">
-							<div class="row" id="content">
+							<div class="clearfix" id="content">
 								<article class="container page page-[*id*] type-page clearfix" id="page-[*id*]" role="article">
 									<header class="entry-header" role="generic">
 										<h1 class="entry-title">[*longtitle:ifempty=`[*pagetitle*]`*]</h1>
@@ -110,11 +110,11 @@
 					</div>
 					<!-- Правая и левая колонки (Виджеты)-->
 					<!-- Правая колонка-->
-					<div class="secondary secondary-right" role="complementary">
+					<section class="secondary secondary-right" role="complementary">
 						<div class="container">
 							<div class="widgets row">
-								<div class="widget eya-panel bvi-no-styles"><a class="bvi-no-styles button-eye" href="javascript:;"><i class="bvi-no-styles icon-eye-new"></i>Версия для слабовидящих</a></div>
-								<div class="widget bvi-no-styles widget_director">
+								<aside class="widget eya-panel bvi-no-styles"><a class="button-eye" href="javascript:;"><i class="icon-eye-new"></i>Версия для слабовидящих</a></aside>
+								<aside class="widget widget_director">
 									<div class="widget_director-header">
 										<h4 class="widget_director-title"><strong>[(manager_position)]</strong></h4>
 										<h5 class="widget_director-header-name">[(manager_name)]</h5><@IF:[(manager_photo:isnotempty)]>
@@ -153,16 +153,16 @@
 											</dd>
 										</dl>
 									</div>
-								</div>[[multiTV? &fromJson=`[(site_right_widgets)]` &tvName=`site_right_widgets`]]
+								</aside>[[multiTV? &fromJson=`[(site_right_widgets)]` &tvName=`site_right_widgets`]]
 							</div>
 						</div>
-					</div>
+					</section>
 					<!-- /Правая колонка-->
 					<!-- Левая колонка-->
-					<div class="secondary secondary-left" role="complementary">
+					<section class="secondary secondary-left" role="complementary">
 						<div class="container">
 							<div class="widgets row">
-								<div class="widget bvi-no-styles education-menu">
+								<aside class="widget education-menu">
 									<article class="widget-article">
 										<header class="widget-article-header">
 											<h5 class="widget-article-title">Сведения об образовательной организации</h5>
@@ -197,10 +197,10 @@
 											!]
 										</div>
 									</article>
-								</div>[[multiTV? &fromJson=`[(site_left_widgets)]` &tvName=`site_left_widgets`]]
+								</aside>[[multiTV? &fromJson=`[(site_left_widgets)]` &tvName=`site_left_widgets`]]
 							</div>
 						</div>
-					</div>
+					</section>
 					<!-- /Левая колонка-->
 				</main>
 				<div class="sitelinks container-full">[[multiTV? &fromJson=`[(site_links)]` &tvName=`site_links` &display=`all`]]</div>
@@ -230,8 +230,8 @@
 				<!-- FancyBox plugins-->
 			</div>
 		</div>
-		<script src="[(site_url)]assets/templates/projectsoft/js/app.min.js?3ed35f82266cbfa365b5bcc2fb860450"></script>
-		<script src="[(site_url)]assets/templates/projectsoft/js/main.min.js?3ed35f82266cbfa365b5bcc2fb860450"></script>
+		<script src="[(site_url)]assets/templates/projectsoft/js/app.min.js?cd4c8c9bd9f21d837c24d232b1f3cbf3"></script>
+		<script src="[(site_url)]assets/templates/projectsoft/js/main.min.js?cd4c8c9bd9f21d837c24d232b1f3cbf3"></script>
 		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript">
 			(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

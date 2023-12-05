@@ -16,7 +16,7 @@ $settings['fields'] = array(
 	)
 );
 $settings['templates'] = array(
-	'outerTpl' => '<div class="row"><div class="clearfix photogallery">[+wrapper+]</div></div>',
+	'outerTpl' => '<div class="row"><aside class="clearfix photogallery">[+wrapper+]</aside></div>',
 	'rowTpl' => '<div class="photogallery-item"><div class="column photogallery-item-image"><a href="[(site_url)][+image+]" data-fancybox-group="photogallery" data-fancybox="ptogallery" data-caption="[[strHsc? &input=`[+title+]`]]" data-loop="true" title="[[strHsc? &input=`[+title+]`]]"><img src="[[thumb? &input=`[+image+]` &options=`w=375,h=240,zc=C`]]" alt="[[strHsc? &input=`[+title+]`]]"></a></div></div>'
 );
 $settings['configuration'] = array(

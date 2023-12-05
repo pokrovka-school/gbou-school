@@ -16,7 +16,7 @@ $settings['fields'] = array(
 	)
 );
 $settings['templates'] = array(
-	'outerTpl' => '<div class="slick-home"><div id="slick" class="slick">[+wrapper+]</div></div>',
+	'outerTpl' => '<div class="slick-home"><aside id="slick" class="slick">[+wrapper+]</aside></div>',
 	'rowTpl' => '<div class="slick-item"><img src="[[phpthumb? &input=`[+image+]` &options=`w=1395,h=450,zc=C`]]" alt="[[strHsc? &input=`[+title+]`]]"></div>'
 );
 $settings['configuration'] = array(

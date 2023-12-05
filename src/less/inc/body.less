@@ -11,11 +11,25 @@ body {
 }
 
 body {
-	background-color: var(--background-color);
+	//background-color: var(--background-color);
 	color: var(--color);
 	font-family: var(--ptsans);
 	position: relative;
 	//font-size: 1.06em;
+	.pagewrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		background-color: #efefef;
+		.body {
+			flex-grow: 1;
+			//background-color: #ffffff;
+			//box-shadow: 0 0 5px #cccccc;
+		}
+		.footer {
+			flex-shrink: 0;
+		}
+	}
 }
 
 .container,

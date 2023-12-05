@@ -16,7 +16,7 @@ $settings['fields'] = array(
 );
 $settings['templates'] = array(
 	'outerTpl' => '[+wrapper+]',
-	'rowTpl' => '<div class="bvi-no-styles widget[+css:ne=``:then=` [+css+]`+]"><article class="widget-article">[+title:ne=``:then=`<header class="widget-article-header"><h5 class="widget-article-title">[+title+]</h5></header>`+]<div class="widget-article-content">[+message+]</div></article></div>'
+	'rowTpl' => '<aside class="widget[+css:ne=``:then=` [+css+]`+]"><article class="widget-article">[+title:ne=``:then=`<header class="widget-article-header"><h5 class="widget-article-title">[+title+]</h5></header>`+]<div class="widget-article-content">[+message+]</div></article></aside>'
 );
 $settings['configuration'] = array(
 	'enablePaste' => true,

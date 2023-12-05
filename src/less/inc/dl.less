@@ -4,7 +4,7 @@ dl {
 		font-weight: 700;
 	}
 	> dd {
-		padding-left: 15px;
+		padding-left: 1rem;
 	}
 	&.dl-horizontal {
 		display: flex;
@@ -18,19 +18,26 @@ dl {
 		}
 		dd {
 			width: calc(100% - 170px);
-			padding-left: 15px;
+			padding-left: 1rem;
 			margin-left: unset;
 			margin-right: unset;
 		}
 		@media (max-width: 767px) {
-			dl.dl-horizontal dt, p.dl-horizontal dt {
+			display: block;
+			flex-direction: unset;
+			flex-wrap: unset;
+			text-align: left;
+			width: auto;
+			dt {
 				text-align: left;
-				width: unset;
+				width: auto;
+				font-weight: 600;
+				white-space: normal;
 			}
 			dd {
 				padding-left: unset;
-				width: unset;
-				margin-left: 40px;
+				width: auto;
+				margin-left: 1rem;
 			}
 		}
 	}

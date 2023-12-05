@@ -548,11 +548,12 @@ module.exports = function(grunt) {
 	});
 	grunt.registerTask('favicon',	["clean", "realFavicon"]);
 	grunt.registerTask('default',	["clean:templates", "concat", "uglify", "webfont", "ttf2woff", "ttf2woff2", "imagemin", "tinyimg", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy", "pug"]);
+	grunt.registerTask('def',	["clean:templates", "concat", "uglify", "ttf2woff", "ttf2woff2", "imagemin", "tinyimg", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy", "pug"]);
 	grunt.registerTask('dev',		["watch"]);
 	grunt.registerTask('css',		["clean:all", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "pug"]);
 	grunt.registerTask('images',	["imagemin", "tinyimg", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "pug"]);
 	grunt.registerTask('js',		["clean:all", "concat", "uglify", "copy:js", "pug"]);
-	//grunt.registerTask('glyph',	["clean:all", "webfont", "ttf2woff", "ttf2woff2", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy:fonts", "pug"]);
+	grunt.registerTask('glyph',		["clean:all", "webfont", "ttf2woff", "ttf2woff2", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy:fonts", "pug"]);
 	grunt.registerTask('fonts',		["clean:all", "ttf2woff", "ttf2woff2", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy:fonts", "pug"]);
 	grunt.registerTask('html',		["clean:all", "pug"]);
 	grunt.registerTask('speed',		["clean:all", "concat", "uglify", "datauri", "sass", "less", "autoprefixer", "group_css_media_queries", "replace", "cssmin", "copy", "pug"]);
